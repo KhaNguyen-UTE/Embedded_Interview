@@ -11,7 +11,7 @@
 
 /*
  * Function: Class Diem
- * Description: Class biễu diễn giá trị tọa độ của điểm thông qua 2 phương thức getX và getY
+ * Description: Class get the data of the point
  * Input:
  *    None
  * Output:
@@ -29,7 +29,7 @@ class Diem{
 
 /*
 * Function: Constructor Diem
-* Description: nhập thông tin khởi tạo các điểm
+* Description: convert data into point
 * Input:
 *   x - int
 *   y - int
@@ -51,7 +51,7 @@ int Diem::getY(){
 
 /*
  * Function: Class calData
- * Description: Class biễu diễn cách tính khoảng cách 2 đoạn thẳng và diện tích tam giác
+ * Description: Class calculate the area of triangle and length of line
  * Input:
  *    None
  * Output:
@@ -77,13 +77,13 @@ class calData{
 
 /*
 * Function: Constructor calData
-* Description: nhập thông tin khởi tạo các cách tính đoạn thẳng hoặc diện tích tam giác
+* Description: get input data
 * Input:
 *   x - int
 *   y - int
 *   z - int
 * Output:
-*   In kết quả ra màn hình
+*   None
 */
 calData::calData(Diem a, Diem b){
     calData::A = a;
@@ -100,11 +100,11 @@ calData::calData(Diem a, Diem b, Diem c){
 
 /*
 * Function: khoangCachHaiDiem()
-* Description: tính độ dài đoạn thẳng xong in ra màn hình
+* Description: calculate the length of line
 * Input:
 *   None
 * Output:
-*   In kết quả ra màn hình
+*   print the result
 */
 void calData::khoangCachHaiDiem(){
     if ( kiemTra == KHOANG_CACH){
@@ -117,11 +117,11 @@ void calData::khoangCachHaiDiem(){
 
 /*
 * Function: dienTichtamgiac()
-* Description: tính diện tích tam giác từ 3 điểm nhập vào màn hình
+* Description: calculate the area of triangle
 * Input:
 *   None
 * Output:
-*   In kết quả ra màn hình
+*   print the result
 */
 void calData::dienTichTamgiac(){
     if ( kiemTra == DIEN_TICH){
