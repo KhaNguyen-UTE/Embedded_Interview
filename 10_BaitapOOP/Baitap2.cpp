@@ -9,59 +9,61 @@
 #include <math.h>
 
 /*
- * Function: Class hinhChuNhat
- * Description: The class represents the properties and methods of the object rectangle
- * Input:
- *    None
- * Output:
- *    None
+* Function: Class hinhChuNhat
+* Description: The class represents the properties and methods of the object rectangle
+* Input:
+*    None
+* Output:
+*    None
 */
 class hinhChuNhat {
   private:  
     int chieuDai;
     int chieuRong;
   public:
-    hinhChuNhat(int dai = 0, int rong = 0) {
-      chieuDai = dai;
-      chieuRong = rong;
-    }
+    hinhChuNhat(int dai = 0, int rong = 0);
     int chuVi();
     int dienTich();
     double duongCheo();
     bool kiemTra();
 };
 
+hinhChuNhat::hinhChuNhat(int dai, int rong){
+  chieuDai = dai;
+  chieuRong = rong;
+}
+
 /*
- * Function: chuVi
- * Description: calculate the perimeter of the rectangle
- * Input:
- *    None
- * Output:
- *    return perimeter of a rectangle
+* Function: chuVi
+* Description: calculate the perimeter of the rectangle
+* Input:
+*    None
+* Output:
+*    return perimeter of a rectangle
 */
 int hinhChuNhat::chuVi() {
   return (hinhChuNhat::chieuDai + hinhChuNhat::chieuRong) * 2;
 }
 
 /*
- * Function: dienTich
- * Description: calculate the area of ​​a rectangle
- * Input:
- *    None
- * Output:
- *    return area of a rectangle
+* Function: dienTich
+* Description: calculate the area of ​​a rectangle
+* Input:
+*    None
+* Output:
+*    return area of a rectangle
 */
 int hinhChuNhat::dienTich() {
   return (hinhChuNhat::chieuDai * hinhChuNhat::chieuRong);
 }
 
 /*
- * Function: duongCheo
- * Description: calculate the diagonal of the rectangle
- * Input:
- *    None
- * Output:
- *    return diagnoal of a rectangle
+* Function: duongCheo
+* Description: calculate the diagonal of the rectangle
+* Input:
+*    None
+* Output:
+*    return diagnoal of a rectangle
 */
 double hinhChuNhat::duongCheo() {
   return sqrt( pow(hinhChuNhat::chieuDai, 2) + pow(hinhChuNhat::chieuRong, 2));
@@ -77,7 +79,7 @@ double hinhChuNhat::duongCheo() {
 */
 bool hinhChuNhat::kiemTra() {
   if(hinhChuNhat::chieuDai == hinhChuNhat::chieuRong) return true;
-  return false;
+  else return false;
 }
 
 int main() {
