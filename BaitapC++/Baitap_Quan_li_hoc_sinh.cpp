@@ -8,7 +8,6 @@
 #include <iostream>
 #include <stdio.h>
 #include <string>
-#include <stdint.h>
 #include <vector>
 
 using namespace std; 
@@ -35,7 +34,7 @@ typedef enum{
 */
 class HocSinh{
     private:
-        uint8_t ID;
+        int ID;
         string NAME;
         int TUOI;
         float DIEM_TOAN;
@@ -61,7 +60,7 @@ class HocSinh{
         void setDiemHoa(float diemhoa);
         float getDiemHoa();
 
-        uint8_t getId();
+        int getId();
         float DiemTrungBinh();
         TypeHocLuc HocLuc();
 };
@@ -80,7 +79,7 @@ class HocSinh{
 *    None
 */
 HocSinh::HocSinh(string name, TypeGioiTinh gioitinh, int tuoi, float diemtoan, float diemly, float diemhoa){
-    static uint8_t id = 100;
+    static int id = 100;
     HocSinh::ID = id;
     HocSinh::NAME = name;
     HocSinh::TUOI = tuoi;
@@ -268,9 +267,9 @@ TypeHocLuc HocSinh::HocLuc(){
  * Input:
  *    none
  * Output:
- *    return Id in type of uint8_t
+ *    return Id in type of int
 */
-uint8_t HocSinh::getId(){
+int HocSinh::getId(){
     return HocSinh::ID;
 }
 
@@ -466,11 +465,11 @@ void Menu::addHocSinh(){
  *    add up date info into Database
 */
 void Menu::updateInfo(){
-    uint8_t id_update;
+    int id_update;
     cout << "Nhap Id cua sinh vien muon update:";
     scanf ("%d", &id_update);
     bool status = false;
-    uint8_t vector_index = 0;
+    int vector_index = 0;
     for(HocSinh sv : Database)
     {
         if (sv.getId() == id_update){
@@ -555,7 +554,6 @@ void Menu::hienthiHocSinh(){
         else s_HocLuc = "Yeu"; 
         printf("|  %-6d|  %-23s|  %-6d|  %-9s| %-7.2f| %-7.2f|  %-7.2f|  %-6.2f|  %-9s|\n",sv.getId(), sv.getTen().c_str(), sv.getTuoi(), s_GioiTinh.c_str()
         , sv.getDiemToan(), sv.getDiemLy(), sv.getDiemHoa(), sv.DiemTrungBinh(), s_HocLuc.c_str());
-        
     }
     cout << "+--------------------------------------------------------------------------------------------------------+" <<endl;
 }
@@ -569,7 +567,7 @@ void Menu::hienthiHocSinh(){
  *    remove from the data
 */
 void Menu::deleteHocSinh(){
-    uint8_t id_delete;
+    int id_delete;
     bool status = false;
     cout << "Nhap Id cua sinh vien muon delete:";
     scanf ("%d", &id_delete);
@@ -597,7 +595,7 @@ void Menu::deleteHocSinh(){
  *    display information of the student being searched
 */
 void Menu::findHocSinh(){
-    uint8_t id_find;
+    int id_find;
     bool status = false;
     cout << "Nhap Id cua sinh vien muon tim:";
     scanf ("%d", &id_find);
@@ -636,15 +634,14 @@ void Menu::findHocSinh(){
  *    show the result
 */
 void Menu::sapxepGPA(){
-    uint8_t length = Database.size();
+    int length = Database.size();
     for(int i = 0; i < length; i++){
         for (int j = i+1 ; j < length; j++){
             if (Database[i].DiemTrungBinh() > Database[j].DiemTrungBinh()){
                     Database.push_back(Database[i]);
                     Database[i] = Database[j];
                     Database[j] = Database[length];
-                    Database.pop_back();
-                    
+                    Database.pop_back();    
             }
         }
     }
@@ -659,7 +656,7 @@ void Menu::sapxepGPA(){
  *    show the result
 */
 void Menu::sapxepTen(){
-    uint8_t length = Database.size();
+    int length = Database.size();
     for(int i = 0; i < length; i++){
         for (int j = i+1 ; j < length; j++){
             if (Database[i].getTen() > Database[j].getTen()){
