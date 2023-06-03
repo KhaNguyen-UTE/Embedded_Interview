@@ -181,6 +181,7 @@ void Staff::orderBeverage(int TABLE_ID){
     bool status = true;;
     while (status == true){
         INPUT_DATA("    Name of beverage: ", order.NAME);
+        int vector_index = 0;
         for (auto temp : *Database_Beverage){
             if( order.NAME == temp.getName()){
                 inputQuantity:
@@ -190,8 +191,11 @@ void Staff::orderBeverage(int TABLE_ID){
                         goto inputQuantity;
                     }
                 status = false;
+                int remainQuantity = temp.getQuantity() - order.QUANTITY;
+                (*Database_Beverage)[vector_index].setQuantity(remainQuantity); 
                 break;
             }
+            vector_index++;
         }
         if(status ==true) cout <<"--Please choose beverage available in stock--" <<endl;
     }
@@ -226,6 +230,14 @@ void Staff::updateBeverage(int TABLE_ID){
                 }
             }
             Database_Table[TABLE_ID -1].Database_Oder[vector_index] = order;
+        }
+        vector_index++;
+    }
+    vector_index = 0;
+    for(auto remain : *Database_Beverage){
+        if(remain.getName() == order.NAME){
+            int remainQuantity = remain.getQuantity() - order.QUANTITY;
+            (*Database_Beverage)[vector_index].setQuantity(remainQuantity); 
         }
         vector_index++;
     }

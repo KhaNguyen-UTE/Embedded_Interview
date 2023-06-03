@@ -61,9 +61,7 @@ void Manage::displayMenu(){
                 deleteBeverage();
                 break;
             case 4:
-                cout <<"toi ne" <<endl;
                 Manage::listBeverage();
-                cout <<"qua roi ne" <<endl;
                 break;
             case 5: 
                 numberOfTable();
