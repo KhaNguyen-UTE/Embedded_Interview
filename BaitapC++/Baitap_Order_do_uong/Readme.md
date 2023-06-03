@@ -1,4 +1,4 @@
-### Manage drink orders
+# Manage drink orders
 
 ----------------------------------------------------------------------
 
@@ -6,11 +6,11 @@
 
 The program has a function to manage beverage orders with 2 main subjects: Managers and Employees
 
-# MainMenu
+### MainMenu
     - Manage
     - Staff
     
-# Manage
+### Manage
     Manager has the function of managing drinks in the restaurant's warehouse
     - Add beverage to stock 
     - Update beverage in stock
@@ -19,7 +19,7 @@ The program has a function to manage beverage orders with 2 main subjects: Manag
     - Enter number of table
     - Back to Main Menu
     
-# Staff
+### Staff
     The staff has the function of managing customer's drink order information on each table
     - Add beverage 
     - Update beverage
