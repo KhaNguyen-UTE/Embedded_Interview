@@ -16,7 +16,7 @@ typedef enum{
 
 typedef struct{
     string NAME;
-    uint8_t QUANTITY;
+    int QUANTITY;
 }OrderBeverage;
 
 typedef struct{
@@ -24,6 +24,12 @@ typedef struct{
     bool TABLE_STATUS;
     vector <OrderBeverage> Database_Oder;
 }Table;
+
+typedef enum{
+    NAME,
+    QUANTITY,
+    PRICE
+}TypeObject;
 
 #define INPUT_DATA(test, value)     \
 cout << test;                       \
@@ -51,57 +57,50 @@ class ListBeverage{
 class MainMenu{
     private:
         vector <ListBeverage > Database_Beverage;
-        vector <Table> Database_Table;
+        vector <OrderBeverage> Database_Oder;
         int numTable = 0;
-        
         TypePosition POSITION;
     public:
         MainMenu();
         TypePosition getPosition();
 };
 
-typedef enum{
-    NAME,
-    QUANTITY,
-    PRICE
-}TypeObject;
-
 class Manage{
     private:
         vector <ListBeverage > *Database_Beverage;
         int *numTable;
         void checkInput(void * value, TypeObject object);
-        
-    public:
-        Manage(vector <ListBeverage> &Database_Beverage, int &numtable);
-        vector <ListBeverage> getDatabase_Beverage();
-        void displayMenu();
         void numberOfTable();
         void addBeverage();
         void updateBeverage();
         void deleteBeverage();
-        void listBeverage();
         int getNumTable();
+    public:
+        Manage(vector <ListBeverage> &Database_Beverage, int &numtable);
+        vector <ListBeverage> getDatabase_Beverage();
+        void displayMenu();
+        void listBeverage();
+        
 };
-
-
 
 class Staff{
     private:
         vector <ListBeverage> getDatabase_Beverage();
+        vector <OrderBeverage> *Database_Oder;
         vector <Table> Database_Table;
         vector <ListBeverage > *Database_Beverage;
         int *numTable;
-        void orderBeverage(uint8_t TABLE_ID);
-        void updateBeverage();
-        void deleteBeverage();
-        void listBeverage(uint8_t TABLE_ID);
-        void createTable(uint8_t TABLE_ID);
-        void resetTable();
-    public:
-        Staff(vector <ListBeverage> &Database_Beverage, int &numTable);
-        void displayStaffMenu();
+        void orderBeverage(int TABLE_ID);
+        void updateBeverage(int TABLE_ID);
+        void deleteBeverage(int TABLE_ID);
+        void listBeverage(int TABLE_ID);
+        void createTable(int TABLE_ID);
+        void payBeverage(int TABLE_ID);
         
+    public:
+        Staff(vector <ListBeverage> &Database_Beverage, int &numTable,vector <OrderBeverage> &Database_Oder);
+        void displayStaffMenu();
+        void checkTable(int Table_ID);
 };
                                                                                             
 #endif
