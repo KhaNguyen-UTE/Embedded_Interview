@@ -1,0 +1,5 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'd:/Learn/Embedded/My_exam/Embedded_Interview_T4/Baitap_Order_do_uong'
+g++ -Wall -Wextra -std=c++11 -IHeader Source/ListBeverage.cpp Source/MainMenu.cpp Source/Manage.cpp Source/Staff.cpp Source/main.cpp -o main
+make: Leaving directory 'd:/Learn/Embedded/My_exam/Embedded_Interview_T4/Baitap_Order_do_uong'
+ 
