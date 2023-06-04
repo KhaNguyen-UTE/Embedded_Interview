@@ -268,7 +268,6 @@ void Staff::deleteBeverage(int TABLE_ID){
         vector_index++;
     }
     if(delete_status == false) cout <<"--Haven't ordered this yet--" <<endl;
-
 }
 
 /*

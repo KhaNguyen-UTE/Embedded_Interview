@@ -55,7 +55,7 @@ MainMenu::MainMenu(){
                     break;
             case STAFF:
                     if(numTable == 0){
-                        cout <<"--PLEASE ENTER THE TABLE--" <<endl;
+                        cout <<"--PLEASE ENTER THE NUMBER OF TABLE--" <<endl;
                         menu.numberOfTable();
                     }
                     order.displayStaffMenu();
