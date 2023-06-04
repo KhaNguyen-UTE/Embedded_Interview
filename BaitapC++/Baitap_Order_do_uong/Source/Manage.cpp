@@ -45,28 +45,32 @@ void Manage::displayMenu(){
 
         if (status < 1 || status > 6 || cin.fail() == true){
             cin.clear();
-            cin.ignore(100, '\n');
+            cin.ignore(100,'\n');  
             cout <<"--Please enter the selection in Manager menu--" <<endl;
             continue;;
         }
 
-        switch (status){
-            case 1: 
-                addBeverage();
-                break;
-            case 2:
-                updateBeverage();
-                break;
-            case 3:
-                deleteBeverage();
-                break;
-            case 4:
-                Manage::listBeverage();
-                break;
-            case 5: 
-                numberOfTable();
-                break;
+        char function_status;
+        do{
+            switch (status){
+                case 1: 
+                    RUN_SELECTION(function_status, Manage::addBeverage());
+                    break;
+                case 2:
+                    RUN_SELECTION(function_status, Manage::updateBeverage());
+                    break;
+                case 3:
+                    RUN_SELECTION(function_status, Manage::deleteBeverage());
+                    break;
+                case 4:
+                    Manage::listBeverage();
+                    break;
+                case 5: 
+                    numberOfTable();
+                    break;
+            }
         }
+        while(function_status == '1');
     }
 }
 
@@ -110,27 +114,17 @@ void Manage::addBeverage(){
          <<"-------------------------" <<endl;
     
     cin.clear();
-    cin.ignore(100, '\n');
+    cin.ignore(100,'\n');  
     cout << "Name: ";
     getline(cin, Name );
 
     importQuantity:
     INPUT_DATA ("Quantity: ", i_Quantity);
-    if (i_Quantity <= 0 || cin.fail() == true){
-        cin.clear();
-        cin.ignore(100, '\n');
-        cout <<"--Please enter the right quantity--" <<endl;
-        goto importQuantity;
-    }
+    CHECK_INPUT_QUANTITY_AND_PRICE(i_Quantity, importQuantity);
     
     importPrice:
     INPUT_DATA ("Price: ", f_Price);
-    if (f_Price <= 0 || cin.fail() ==true){
-        cin.clear();
-        cin.ignore(100, '\n');
-        cout <<"--Please enter the right price--" <<endl;
-        goto importPrice;
-    }
+    CHECK_INPUT_QUANTITY_AND_PRICE(f_Price, importPrice);
     
     ListBeverage beverage(Name, i_Quantity, f_Price);
     Database_Beverage->push_back(beverage);
@@ -173,23 +167,13 @@ void Manage::updateBeverage(){
                         case 2: 
                                 importQuantity:
                                 INPUT_DATA (" Quantity: ", i_Quantity);
-                                if (i_Quantity <= 0 || cin.fail() == true){
-                                    cin.clear();
-                                    cin.ignore(100, '\n');
-                                    cout <<"--Please enter the right quantity--" <<endl;
-                                    goto importQuantity;                         
-                                }
+                                CHECK_INPUT_QUANTITY_AND_PRICE(i_Quantity, importQuantity);
                                 temp.setQuantity(i_Quantity);  
                                 break;
                         case 3: 
                                 importPrice:
                                 INPUT_DATA (" Price: ", f_Price);
-                                if (f_Price <= 0 || cin.fail() ==true){
-                                    cin.clear();
-                                    cin.ignore(100, '\n');
-                                    cout <<"--Please enter the right price--" <<endl;
-                                    goto importPrice;
-                                }
+                                CHECK_INPUT_QUANTITY_AND_PRICE(f_Price, importPrice);
                                 temp.setPrice(f_Price);
                                 break;
                 } 
@@ -198,6 +182,7 @@ void Manage::updateBeverage(){
         vector_index++;
     }
     if (status == false) cout << "--DON'T HAVE BEVERAGE IN STOCK--" << endl;
+    else cout <<"--UPDATE COMPLETED--" <<endl <<endl;
 }
 
 /*
@@ -217,11 +202,11 @@ void Manage::deleteBeverage(){
         if (Name == temp.getName()){
             (*Database_Beverage).erase(vector_index);
             status = true;
-            cout <<"SUCCESSFULLY DELETED" <<endl;
+            cout <<"SUCCESSFULLY DELETED" <<endl <<endl;
         }
         vector_index++;
     }
-    if (status == false) cout << "--DON'T HAVE BEVERAGE IN STOCK--" << endl;
+    if (status == false) cout << "--DON'T HAVE BEVERAGE IN STOCK--" <<endl <<endl;
 }
 
 /*

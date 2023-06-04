@@ -44,7 +44,7 @@ MainMenu::MainMenu(){
         else if (i_position == 0) break;
         else {
             cin.clear();
-            cin.ignore(100, '\n');
+            cin.ignore(100,'\n');                                      
             cout <<"-- Please enter the options available in the table --" <<endl;
             continue;
         }
@@ -53,7 +53,11 @@ MainMenu::MainMenu(){
             case MANAGER:
                     menu.displayMenu(); 
                     break;
-            case STAFF: 
+            case STAFF:
+                    if(numTable == 0){
+                        cout <<"--PLEASE ENTER THE TABLE--" <<endl;
+                        menu.numberOfTable();
+                    }
                     order.displayStaffMenu();
                     break;
         }

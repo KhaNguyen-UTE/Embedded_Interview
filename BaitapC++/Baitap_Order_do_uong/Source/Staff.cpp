@@ -125,33 +125,32 @@ void Staff::createTable(int TABLE_ID){
     INPUT_DATA ("Enter your selection / 0 for back to Main Menu: ", orderSelection);
     if (orderSelection == 0 ) break;
 
-    switch (orderSelection){
-        case 1: 
-                orderBeverage(TABLE_ID);
-                cin.clear();
-                cin.ignore(100, '\n');
+    char create_status;
+    do{
+        switch (orderSelection){
+            case 1: 
+                STAFF_RUN_SELECTION("--DON'T HAVE BEVERAGE IN STOCK--",(*Database_Beverage).empty(),
+                create_status, Staff::orderBeverage(TABLE_ID));
                 break;
-        case 2:
-                updateBeverage(TABLE_ID);
-                cin.clear();
-                cin.ignore(100, '\n');
+            case 2:
+                STAFF_RUN_SELECTION("--TABLE HAVEN'T ORDER--",Database_Table[TABLE_ID-1].Database_Oder.empty(),
+                create_status, Staff::updateBeverage(TABLE_ID));
                 break;
-        case 3:
-                deleteBeverage(TABLE_ID);
-                cin.clear();
-                cin.ignore(100, '\n');
+            case 3:
+                STAFF_RUN_SELECTION("--TABLE HAVEN'T ORDER--",Database_Table[TABLE_ID-1].Database_Oder.empty(),
+                create_status,  Staff::deleteBeverage(TABLE_ID));
                 break;
-        case 4:
-                listBeverage(TABLE_ID);
-                cin.clear();
-                cin.ignore(100, '\n');
+            case 4:
+                STAFF_RUN_SELECTION("--TABLE HAVEN'T ORDER--",Database_Table[TABLE_ID-1].Database_Oder.empty(),
+                create_status,  Staff::listBeverage(TABLE_ID));
                 break;
-        case 5:
-                payBeverage(TABLE_ID);
-                cin.clear();
-                cin.ignore(100, '\n');
+            case 5:
+                STAFF_RUN_SELECTION("--TABLE HAVEN'T ORDER--",Database_Table[TABLE_ID-1].Database_Oder.empty(),
+                create_status,  Staff::payBeverage(TABLE_ID));
                 break;         
+        }
     }
+    while(create_status == '1');
     }
 }
 
@@ -214,18 +213,20 @@ void Staff::updateBeverage(int TABLE_ID){
     OrderBeverage order;
     bool update_status =false;
     int vector_index = 0;
+    int remainQuantity;
     listBeverage(TABLE_ID);
     INPUT_DATA("    Name of beverage: ", order.NAME);
     for(auto temp : Database_Table[TABLE_ID -1].Database_Oder){
         if(order.NAME == temp.NAME){
             update_status = true;
+            remainQuantity = temp.QUANTITY;
             inputQuantity:
             INPUT_DATA("    Quanity of beverage: ", order.QUANTITY);
             for (auto available : *Database_Beverage){
                 if(available.getName() == order.NAME)
                 if(order.QUANTITY > available.getQuantity()){
                     cout <<"--Please choose the quantity available in stock--" <<endl
-                         <<"  Available: " <<available.getQuantity()           <<endl;
+                         <<"  AVAILABLE: " <<available.getQuantity()           <<endl;
                     goto inputQuantity;
                 }
             }
@@ -236,12 +237,12 @@ void Staff::updateBeverage(int TABLE_ID){
     vector_index = 0;
     for(auto remain : *Database_Beverage){
         if(remain.getName() == order.NAME){
-            int remainQuantity = remain.getQuantity() - order.QUANTITY;
+            remainQuantity = remainQuantity - order.QUANTITY + remain.getQuantity();
             (*Database_Beverage)[vector_index].setQuantity(remainQuantity); 
         }
         vector_index++;
     }
-    if(update_status == false) cout <<"--Haven't ordered this yet--" <<endl;
+    if(update_status == false) cout <<"--HAVEN'T ORDERED THIS YET--" <<endl;
 }
 
 /*

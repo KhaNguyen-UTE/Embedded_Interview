@@ -35,6 +35,28 @@ typedef enum{
 cout << test;                       \
 cin  >> value;                      \
 
+#define CHECK_INPUT_QUANTITY_AND_PRICE(value, gotofunction)       \
+if (value <= 0 || cin.fail() == true){                            \
+    cin.clear();                                                  \
+    cin.ignore(100,'\n');                                         \
+    cout <<"--Please enter the right value--" <<endl;             \
+    goto gotofunction;                                            \
+}                                                                 \
+
+#define RUN_SELECTION(var, run_function)                          \
+run_function;                                                     \
+cout <<"Enter next operation:" <<endl;                            \
+cout <<"      Press -1- Continue doing this action" <<endl;       \
+cout <<"      Press -ANY KEY- Back to Manager" <<endl;            \
+cout <<"Press:...";                                               \
+cin >> var;                                                       \
+
+#define STAFF_RUN_SELECTION(test, condition, var, function)       \
+if(condition == false){                                           \
+     RUN_SELECTION(var, function)                                 \
+}                                                                 \
+else cout <<test <<endl;                                          \
+
 class ListBeverage{
     private:
         uint8_t ID;
@@ -70,7 +92,6 @@ class Manage{
         vector <ListBeverage > *Database_Beverage;
         int *numTable;
         void checkInput(void * value, TypeObject object);
-        void numberOfTable();
         void addBeverage();
         void updateBeverage();
         void deleteBeverage();
@@ -79,8 +100,8 @@ class Manage{
         Manage(vector <ListBeverage> &Database_Beverage, int &numtable);
         vector <ListBeverage> getDatabase_Beverage();
         void displayMenu();
-        void listBeverage();
-        
+        void listBeverage(); 
+        void numberOfTable();
 };
 
 class Staff{
@@ -96,7 +117,6 @@ class Staff{
         void listBeverage(int TABLE_ID);
         void createTable(int TABLE_ID);
         void payBeverage(int TABLE_ID);
-        
     public:
         Staff(vector <ListBeverage> &Database_Beverage, int &numTable,vector <OrderBeverage> &Database_Oder);
         void displayStaffMenu();
