@@ -2,7 +2,7 @@
 --------------------------------------------------------------------------------------
 ## Description
     The program has the ability to create Menus to manage Student objects
-### Memu
+### Menu
     1. Them sinh vien
     2. Cap nhat thong tin
     3. Xoa thong tin sinh vien
