@@ -49,16 +49,18 @@ void Manage::displayMenu(){
             cout <<"--Please enter the selection in Manager menu--" <<endl;
             continue;;
         }
-
+        
         char function_status;
         do{
             switch (status){
                 case 1: 
                     RUN_SELECTION(function_status, Manage::addBeverage());
                     break;
-                case 2:
-                    RUN_SELECTION(function_status, Manage::updateBeverage());
-                    break;
+                case 2:{
+                    string Name;
+                    INPUT_DATA("Enter name of beverage: ", Name);
+                    RUN_SELECTION(function_status, Manage::updateBeverage(Name));
+                    }break;
                 case 3:
                     RUN_SELECTION(function_status, Manage::deleteBeverage());
                     break;
@@ -110,6 +112,7 @@ void Manage::addBeverage(){
     string Name;
     int i_Quantity;
     float f_Price;
+    bool check_input_name = false;
     cout <<"Add beverage to the stock" <<endl
          <<"-------------------------" <<endl;
     
@@ -118,17 +121,34 @@ void Manage::addBeverage(){
     cout << "Name: ";
     getline(cin, Name );
 
-    importQuantity:
-    INPUT_DATA ("Quantity: ", i_Quantity);
-    CHECK_INPUT_QUANTITY_AND_PRICE(i_Quantity, importQuantity);
-    
-    importPrice:
-    INPUT_DATA ("Price: ", f_Price);
-    CHECK_INPUT_QUANTITY_AND_PRICE(f_Price, importPrice);
-    
-    ListBeverage beverage(Name, i_Quantity, f_Price);
-    Database_Beverage->push_back(beverage);
-    cout <<"--Added successfully--" <<endl;
+    for (auto check_name  : *Database_Beverage){
+        if (Name == check_name.getName()){
+            char status;
+            cout <<"--DRINKS ALREADY EXIST--"   << endl;
+            cout <<"Do you want to update it?"  << endl;
+            cout <<"    Press 1 to update"      << endl;
+            cout <<"    Press -ANY KEY- to back"<< endl;
+            cout <<"Selection:...";
+            cin >> status;
+            if (status == '1') Manage::updateBeverage(Name);
+            check_input_name = true;
+            break;
+        }
+    }
+
+    if (check_input_name == false){
+        importQuantity:
+        INPUT_DATA ("Quantity: ", i_Quantity);
+        CHECK_INPUT_QUANTITY_AND_PRICE(i_Quantity, importQuantity);
+        
+        importPrice:
+        INPUT_DATA ("Price: ", f_Price);
+        CHECK_INPUT_QUANTITY_AND_PRICE(f_Price, importPrice);
+        
+        ListBeverage beverage(Name, i_Quantity, f_Price);
+        Database_Beverage->push_back(beverage);
+        cout <<"--Added successfully--" <<endl;
+    }
 }
 
 /*
@@ -139,14 +159,12 @@ void Manage::addBeverage(){
 * Output:
 *   print the result
 */
-void Manage::updateBeverage(){
+void Manage::updateBeverage(string Name){
     int update_selection;
     bool status = false;
     int vector_index = 0;
-    string Name;
     int i_Quantity;
     float f_Price;
-    INPUT_DATA("Enter name of beverage: ", Name);
     for (ListBeverage &temp : *Database_Beverage){
         if (Name == temp.getName()){
                 cout <<" Enter your selection:"          <<endl

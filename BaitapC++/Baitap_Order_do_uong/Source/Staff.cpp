@@ -177,28 +177,51 @@ void Staff::orderBeverage(int TABLE_ID){
 
     cout <<"                       ORDER"                        <<endl
          <<"+-------------------------------------------------+" <<endl;
-    bool status = true;;
+    bool status = true;
+    bool check_exist = false;
     while (status == true){
         INPUT_DATA("    Name of beverage: ", order.NAME);
         int vector_index = 0;
-        for (auto temp : *Database_Beverage){
-            if( order.NAME == temp.getName()){
-                inputQuantity:
-                    INPUT_DATA("    Quanity of beverage: ", order.QUANTITY);
-                    if(order.QUANTITY > temp.getQuantity()){
-                        cout <<"--Please choose the quantity available in stock--" <<endl;
-                        goto inputQuantity;
-                    }
+        for (auto table : Database_Table[TABLE_ID-1].Database_Oder){
+            if (order.NAME == table.NAME){
+                char selection_status;
+                cout <<"--THE PRODUCT HAS BEEN ORDERED, DO YOU WANT TO UPDATE THE QUANTITY?--" <<endl;
+                cout <<"    Press 1 to update" <<endl
+                     <<"    Press -ANY KEY- to back" <<endl
+                     <<"Selection:...";
+                cin >> selection_status;
+                if (selection_status == '1') Staff::updateBeverage(TABLE_ID);
+                check_exist = true;
                 status = false;
-                int remainQuantity = temp.getQuantity() - order.QUANTITY;
-                (*Database_Beverage)[vector_index].setQuantity(remainQuantity); 
                 break;
             }
-            vector_index++;
         }
-        if(status ==true) cout <<"--Please choose beverage available in stock--" <<endl;
+        if(check_exist == false){
+            for (auto temp : *Database_Beverage){
+                if( order.NAME == temp.getName()){
+                    if(temp.getQuantity() == 0){
+                        cout <<"--THE BEVERAGE IS OUT OF STOCK--" <<endl;
+                        status = false;
+                        break;
+                    }
+                    inputQuantity:
+                        INPUT_DATA("    Quanity of beverage: ", order.QUANTITY);
+                        if(order.QUANTITY > temp.getQuantity()){
+                            cout <<"--Please choose the quantity available in stock--" <<endl;
+                            goto inputQuantity;
+                        }
+                    status = false;
+                    int remainQuantity = temp.getQuantity() - order.QUANTITY;
+                    (*Database_Beverage)[vector_index].setQuantity(remainQuantity); 
+                    break;
+                }
+                vector_index++;
+            }
+            if(status ==true) cout <<"--Please choose beverage available in stock--" <<endl;
+        }
     }
-    Database_Table[TABLE_ID-1].Database_Oder.push_back(order);
+    if (check_exist == false)
+        Database_Table[TABLE_ID-1].Database_Oder.push_back(order);
 }
 
 /*
@@ -224,9 +247,9 @@ void Staff::updateBeverage(int TABLE_ID){
             INPUT_DATA("    Quanity of beverage: ", order.QUANTITY);
             for (auto available : *Database_Beverage){
                 if(available.getName() == order.NAME)
-                if(order.QUANTITY > available.getQuantity()){
-                    cout <<"--Please choose the quantity available in stock--" <<endl
-                         <<"  AVAILABLE: " <<available.getQuantity()           <<endl;
+                if(order.QUANTITY > available.getQuantity() + remainQuantity){
+                    cout <<"--Please choose the quantity available in stock--"           <<endl
+                         <<"  AVAILABLE: " <<available.getQuantity() + remainQuantity    <<endl;
                     goto inputQuantity;
                 }
             }
@@ -261,6 +284,9 @@ void Staff::deleteBeverage(int TABLE_ID){
     vector <OrderBeverage> :: iterator vector_index = Database_Table[TABLE_ID - 1].Database_Oder.begin();
     for( auto temp : Database_Table[TABLE_ID - 1].Database_Oder){
         if(order.NAME == temp.NAME){
+            for (auto stock : *Database_Beverage){
+                if(order.NAME == stock.getName())     stock.setQuantity(temp.QUANTITY + stock.getQuantity());
+            }
             Database_Table[TABLE_ID - 1].Database_Oder.erase(vector_index);
             delete_status = true;
             cout <<"SUCCESSFULLY DELETED" <<endl;

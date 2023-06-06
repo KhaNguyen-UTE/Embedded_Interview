@@ -93,7 +93,7 @@ class Manage{
         int *numTable;
         void checkInput(void * value, TypeObject object);
         void addBeverage();
-        void updateBeverage();
+        void updateBeverage(string Name);
         void deleteBeverage();
         int getNumTable();
     public:
