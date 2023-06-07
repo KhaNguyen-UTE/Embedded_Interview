@@ -87,13 +87,13 @@
    
    ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/52d3dd8f-a648-47ed-a00c-5418478a37f0)
    
-1. Giai đoạn tiền xử lý – Preprocessor
+1. **Giai đoạn tiền xử lý – Preprocessor**
    
-Giai đoạn này sẽ thực hiện:
-   - Nhận mã nguồn
-   - Xóa bỏ tất cả chú thích, comments của chương trình
-   - Chỉ thị tiền xử lý (bắt đầu bằng #) cũng được xử lý
-Ví dụ: chỉ thị #include cho phép ghép thêm mã chương trình của một tệp tiêu để vào mã nguồn cần dịch. Các hằng số được định nghĩa bằng #define sẽ được thay thế bằng giá trị cụ thể tại mỗi nơi sử dụng trong chương trình.
+> Giai đoạn này sẽ thực hiện:
+>>   - Nhận mã nguồn
+>>   - Xóa bỏ tất cả chú thích, comments của chương trình
+>>   - Chỉ thị tiền xử lý (bắt đầu bằng #) cũng được xử lý
+> Ví dụ: chỉ thị #include cho phép ghép thêm mã chương trình của một tệp tiêu để vào mã nguồn cần dịch. Các hằng số được định nghĩa bằng #define sẽ được thay thế bằng giá trị cụ thể tại mỗi nơi sử dụng trong chương trình.
    
 
 
