@@ -1,9 +1,9 @@
 # Embedded_Interview_T4
-
+<details>
 <summary>
 # C
 </summary>
-<details>
+
 ### You can add a header
 
 You can add text within a collapsed section. 
