@@ -17,7 +17,7 @@
    
 ### Khai báo class và sử dụng class
    
-    ```ruby
+       ```ruby
        class Person {
        public:
        string firstName; // property
@@ -27,7 +27,7 @@
        cout << firstName << ' ' << lastName;
        }
       }
-    ```
+      ```
    
  ### Access modifiers & properties declaration
    
