@@ -86,7 +86,6 @@ void Animal::makeNoise() {
 
 </details>
 
--------------------------------
 
 <details>
 
