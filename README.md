@@ -16,8 +16,24 @@
 > - Lập trình C được coi là cơ sở cho các ngôn ngữ lập trình khác, đó là lý do tại sao nó được biết đến như là ngôn ngữ mẹ. Hầu hết các trình biên dịch, JVMs, Kernals vv được viết bằng ngôn ngữ C và hầu hết các ngôn ngữ theo cú pháp C, như C ++, Java vv.
 > - Nó cung cấp các khái niệm cốt lõi như mảng, chức năng, xử lý tập tin vv được sử dụng trong nhiều ngôn ngữ như C ++, java, C # v.v.
    
-   
 </details>
+
+<details>
+
+<summary>🔸 Macro, Inline and Function</summary>
+
+## 👉 Macro
+
+
+
+
+
+
+
+
+
+
+
    
 ##
 
