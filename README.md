@@ -16,7 +16,6 @@
         ▪ Trong C++, từ khóa class sẽ chỉ điểm bắt đầu của một class sẽ được cài đặt.
    
 ### Khai báo class và sử dụng class
-   
        ```ruby
        class Person {
        public:
