@@ -40,6 +40,17 @@
 ### **Function**
    
 > - Hàm bình thường, khi thấy hàm được gọi, chương trình lưu đia chỉ hiện tại vào ***Stack Pointer***, sau đó chỏ con trỏ PC đến phân vùng nhớ của hàm được gọi. Thực thi câu lệnh của hàm được gọi, lấy kết quả lưu vào ***Stack***. Sau đó nó quay lại vào ***Stack Pointer***, lấy địa chỉ đó ra và tiếp tục chạy tiếp chương trình.
+> - Như có thể thấy, các này khiến chương trình tốn thời gian hơn là chỉ cần thay thế đoạn code đã được compile (cách của inline function).
+   
+### 💹 Compare
+> - Macro đơn giản là chỉ thay thế đoạn code macro vào chỗ được gọi trước khi được biên dịch
+> - Inline thay thế đoạn mã code đã được biên dịch vào chỗ được gọi
+> - Hàm bình thường phải tạo một function call, lưu địa chỉ trước khi gọi hàm vào stack sau đó mới thực hiện hàm và sau cùng là quay trở về địa chỉ trên stack trước khi gọi hàm và thực hiện tiếp chương trình
+> - Macro khiến code trở nên dài hơn rất nhiều so với bình thường nhưng thời gian chạy nhanh.
+> - Hàm inline cũng khiến code dài hơn, tuy nhiên nó làm giảm thời gian chạy chương trình
+> - Hàm bình thường sẽ phải gọi function call nên tốn thời gian hơn inline function nhưng code ngắn gọn hơn.
+
+</details>   
 
 
 
