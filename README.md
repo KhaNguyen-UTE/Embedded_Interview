@@ -153,22 +153,41 @@ của vector thì sẽ bị ném ra.
 ```ruby
 ten-vector.push_back(ten-cua-phan-tu);
 ```
-2. assign(): Nó gán một giá trị mới cho các phần tử vector bằng cách thay thế các 
-giá trị cũ.
+2. assign(): Nó gán một giá trị mới cho các phần tử vector bằng cách thay thế các  giá trị cũ.
+```ruby  
 ten-vector.assign(int size, int value);
-3. pop_back(): Hàm pop_back () được sử dụng để xóa đi phần tử cuối cùng một 
-vector.
-4. insert(): Hàm này chèn các phần tử mới vào trước phần tử trước vị trí được trỏ 
-bởi vòng lặp. Chúng ta cũng có thể chuyển một số đối số thứ ba, đếm số lần phần tử 
-được chèn vào trước vị trí được trỏ.
+```   
+3. pop_back(): Hàm pop_back () được sử dụng để xóa đi phần tử cuối cùng một vector.
+```ruby
+ten-vector.pop_back();   
+```   
+4. insert(): Hàm này chèn các phần tử mới vào trước phần tử trước vị trí được trỏ bởi vòng lặp. Chúng ta cũng có thể chuyển một số đối số thứ ba, đếm số lần phần tử được chèn vào trước vị trí được trỏ.
+```ruby
+ten-vector.insert(position, value);   
+```    
 5. erase(): Hàm được sử dụng để xóa các phần tử tùy theo vị trí vùng chứa
+```ruby
+ten-vector.erase(position);
+
+ten-vector.erase(start-position, end-position);   
+```      
 6. emplace(): Nó mở rộng vùng chứa bằng cách chèn phần tử mới vào
-7. emplace_back(): Nó được sử dụng để chèn một phần tử mới vào vùng chứa 
-vector, phần tử mới sẽ được thêm vào cuối vector
-8. swap(): Hàm được sử dụng để hoán đổi nội dung của một vector này với một 
-vector khác cùng kiểu. Kích thước có thể khác nhau.
+```ruby
+ten-vector.emplace(ten-vector.position, element);   
+```      
+7. emplace_back(): Nó được sử dụng để chèn một phần tử mới vào vùng chứa vector, phần tử mới sẽ được thêm vào cuối vector
+```ruby
+ten-vector.emplace_back(value);   
+```      
+8. swap(): Hàm được sử dụng để hoán đổi nội dung của một vector này với một vector khác cùng kiểu. Kích thước có thể khác nhau.
+```ruby
+ten-vector-1.swap(ten-vector-2);   
+```      
 9. clear(): Hàm được sử dụng để loại bỏ tất cả các phần tử của vùng chứa vector
-   
+```ruby
+ten-vector.clear();  
+``` 
+
    
 </details>
 
