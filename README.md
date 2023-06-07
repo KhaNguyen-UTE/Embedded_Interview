@@ -8,7 +8,6 @@
 <details>
 
 <summary>
-   
 🔸 **Introduce**
    
 </summary>
