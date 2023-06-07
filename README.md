@@ -26,7 +26,11 @@
    
 > - Được xử lý bởi preprocessor
 > - Thay thế đoạn code được khai báo macro vào bất cứ chỗ nào xuất hiện macro đó
+   
+>>   ```ruby
 >>   VD: #define SUM(a,b)     (a+b)
+>>   ```
+   
 > - Preprocessor khi gặp bất kỳ lời gọi SUM(first+last) nào thì thay ngay bằng (first+last)
 
 ### **Inline**
