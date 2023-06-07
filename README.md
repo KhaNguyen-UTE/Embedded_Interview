@@ -17,7 +17,7 @@
    
 ### Khai báo class và sử dụng class
    
-    ```
+    ```ruby
        class Person {
        public:
        string firstName; // property
