@@ -7,7 +7,7 @@
 <details>
 <summary>💊C++</summary>
      
-### Class
+###     ♦ Class
     
 </details>
 
