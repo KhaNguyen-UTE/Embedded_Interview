@@ -90,6 +90,17 @@ void Animal::makeNoise() {
 
 <summary>🔸 OOP</summary>
 
+### Khái niệm
+> OOP Object - Oriented Programming là cách tư duy mới tiếp cận hướng đối tượng để giải quyết các vấn đề bằng máy tính. Là một mô hình dựa trên khái niệm về Class và Object. Nó được sử dụng để tách 1 chương trình thành các phần đơn giản hơn, có thể tái sử dụng.
+
+### Các đặc tính của lập trình hướng đối tượng
+> Có 4 đặc tính: Kế thừa, Trừu tượng, Đa hình và Đóng gói
+
+   👉 Tính kế thừa / Inheritance 
+Có 3 loại kế thừa : public, private và protected
+   
+   > Có nghĩa là một Class có thể kế thừa lại Class trước đó. Class kế thừa được gọi là Class con hay còn gọi là _subclass_. Class được kế thừa gọi là class cha hay còn gọi là _superclass_. Ngoài ra còn có thể mở rộng thêm các thành phần kế thừa và bổ sung thêm các thành phần mới.
+   
 
    
 </details>
