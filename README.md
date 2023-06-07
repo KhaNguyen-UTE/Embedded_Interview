@@ -44,7 +44,7 @@ cout << firstName << ' ' << lastName;
    
 ### Method declaration
    
-   > Phương thức cũng giống như một hàm bình thường.
+   > Phương thức cũng giống như một hàm bình thường. Nó có thể có hoặc không có tham số, không trả về giá trị và thậm chí là override hàm.
      Đối với phương thức thì có **hai cách** định nghĩa thi hành: định nghĩa thi hành trong lúc định nghĩa class và định nghĩa thi hành bên ngoài class.
  
    👉 Định nghĩa thi hành bên trong class:
@@ -70,6 +70,12 @@ void Animal::makeNoise() {
 }
 ```
 
+   👉 Tham sôs truyền vào phương thức:   
+- Cách 1: Dặt tên trùng với thuộc tính Class bằng cách kết hợp toán tử :: và con trỏ _this_\
+- Cách 2: Đặt tên khác với thuộc tính ( thường thêm dấu "_" trước tên tham số giống thuộc tính private
+      ◽ ***Con trỏ this*** : đề cập đến thể hiện hay instance của class đó, thông qua con trỏ this ta có thể truy cập đến các thuộc tính và phương thức.
+      ◽ ***Toán tử phạm vi*** : dùng để xác định phương thức hoặc thuộc tính được gọi từ Class nào.
+   
 ### Constructor
 > Constructor hay hàm dựng là một hàm đặc biệt, nó sẽ được gọi ngay khi chúng ta 
 khởi tạo một object.
