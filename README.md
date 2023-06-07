@@ -124,7 +124,9 @@ void Animal::makeNoise() {
 
 ### Templete
    > - Là một từ khóa trong C++, và là một kiểu dữ liệu trừu tượng tổng quát hóa cho các kiểu dữ liệu int, float, double, bool...
+   
      - Template trong C++ có **2 loại** đó là _ function template_ & _class template_.
+   
      - Template giúp người lập trình định nghĩa tổng quát cho hàm và lớp thay vì phải nạp chồng (overloading) cho từng hàm hay phương thức với những kiểu dữ liệu khác nhau.
 
 </details>
