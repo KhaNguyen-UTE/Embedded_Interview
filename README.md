@@ -47,7 +47,7 @@ cout << firstName << ' ' << lastName;
    > Phương thức cũng giống như một hàm bình thường. Nó có thể có hoặc không có tham số, không trả về giá trị và thậm chí là override hàm.
      Đối với phương thức thì có **hai cách** định nghĩa thi hành: định nghĩa thi hành trong lúc định nghĩa class và định nghĩa thi hành bên ngoài class.
  
-   👉 ** Định nghĩa thi hành bên trong class:**
+   👉 **Định nghĩa thi hành bên trong class:**
 ```ruby
 class Animal {
  public:
@@ -96,12 +96,12 @@ void Animal::makeNoise() {
 ### Các đặc tính của lập trình hướng đối tượng
 > Có 4 đặc tính: Kế thừa, Trừu tượng, Đa hình và Đóng gói
 
-👉 **Tính kế thừa / Inheritance **
+👉 **Tính kế thừa / Inheritance**
 - Có 3 loại kế thừa : public, private và protected
    
    > Có nghĩa là một Class có thể kế thừa lại Class trước đó. Class kế thừa được gọi là Class con hay còn gọi là _subclass_. Class được kế thừa gọi là class cha hay còn gọi là _superclass_. Ngoài ra còn có thể mở rộng thêm các thành phần kế thừa và bổ sung thêm các thành phần mới.
    
-👉 **Tính trừu tượng / Abstraction **
+👉 **Tính trừu tượng / Abstraction**
 - Chỉ cần biết kết quả chứ không quan tâm cách làm
    > Là một khả năng mà chương trình có thể bỏ qua sự phức tạp bằng cách tập trung vào cốt lõi của thông tin cần xử lý. Điều đó có nghĩa, bạn có thể xử lý một đối tượng bằng cách gọi tên một phương thức và thu về kết quả xử lý, mà không cần biết làm cách nào đối tượng đó được các thao tác trong class.
 
