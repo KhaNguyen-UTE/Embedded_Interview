@@ -55,6 +55,7 @@
 <details>
 
 <summary>🔸 Static</summary>
+   
 ### Static cục bộ
    
 > Khi 1 biến cục bộ được khai báo với từ khóa static. Biến sẽ chỉ được khởi tạo 1 lần duy nhất và tồn tại suốt thời gian chạy chương trình. Giá trị của nó không bị mất đi ngay cả khi kết thúc hàm. Tuy nhiên khác với biến toàn cục có thể gọi trong tất cả mọi nơi trong chương trình, thì biến cục bộ static chỉ có thể được gọi trong nội bộ hàm khởi tạo ra nó. Mỗi lần hàm được gọi, giá trị của biến chính bằng giá trị tại lần gần nhất hàm được gọi.   
@@ -73,6 +74,30 @@
 >> - Union : Dữ liệu các thành viên sẽ dùng chung 1 vùng nhớ. Kích thước của union được tính là kích thước lớn nhất của kiểu dữ liệu trong union. Việc thay đổi nội dung của 1 thành viên sẽ dẫn đến thay đổi nội dung của các thành viên khác.
 
 </details>     
+
+<details>
+
+<summary>🔸 Compiler</summary>
+   
+> Quy trình dịch là quá trình chuyển đổi từ ngôn ngữ bậc cao (NNBC) (C/C++, Pascal, Java, C#…) sang ngôn ngữ đích (ngôn ngữ máy) để máy tính có thể hiểu và thực thi. Ngôn ngữ lập trình C là một ngôn ngữ dạng biên dịch. Chương trình được viết bằng C muốn chạy được trên máy tính phải trải qua một quá trình biên dịch để chuyển đổi từ dạng mã nguồn sang chương trình dạng mã thực thi. Quá trình được chia ra làm 4 giai đoạn chính:
+>> - 	Giai đoàn tiền xử lý (Pre-processor)
+>> -	Giai đoạn dịch NNBC sang Asembly (Compiler)
+>> - 	Giai đoạn dịch asembly sang ngôn ngữ máy (Asember)
+>> -	Giai đoạn liên kết (Linker)
+   
+   ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/52d3dd8f-a648-47ed-a00c-5418478a37f0)
+   
+1. Giai đoạn tiền xử lý – Preprocessor
+   
+Giai đoạn này sẽ thực hiện:
+   - Nhận mã nguồn
+   - Xóa bỏ tất cả chú thích, comments của chương trình
+   - Chỉ thị tiền xử lý (bắt đầu bằng #) cũng được xử lý
+Ví dụ: chỉ thị #include cho phép ghép thêm mã chương trình của một tệp tiêu để vào mã nguồn cần dịch. Các hằng số được định nghĩa bằng #define sẽ được thay thế bằng giá trị cụ thể tại mỗi nơi sử dụng trong chương trình.
+   
+
+
+
 
 
 
