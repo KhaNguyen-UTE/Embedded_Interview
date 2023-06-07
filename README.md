@@ -16,17 +16,18 @@
         ▪ Trong C++, từ khóa class sẽ chỉ điểm bắt đầu của một class sẽ được cài đặt.
    
 ### Khai báo class và sử dụng class
-       ```ruby
-       class Person {
-       public:
-       string firstName; // property
-       string lastName; // property
-       int age; // property
-       void fullname() { // method
-       cout << firstName << ' ' << lastName;
-       }
-      }
-      ```
+   
+```ruby
+class Person {
+public:
+string firstName; // property
+string lastName; // property
+int age; // property
+void fullname() { // method
+cout << firstName << ' ' << lastName;
+}
+}
+```
    
  ### Access modifiers & properties declaration
    
