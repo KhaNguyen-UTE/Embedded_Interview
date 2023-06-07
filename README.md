@@ -22,9 +22,22 @@
 
 <summary>🔸 Macro, Inline and Function</summary>
 
-## 👉 Macro
+###  **Macro**
+   
+> - Được xử lý bởi preprocessor
+> - Thay thế đoạn code được khai báo macro vào bất cứ chỗ nào xuất hiện macro đó
+   - VD: #define SUM(a,b)     (a+b)
+> - Preprocessor khi gặp bất kỳ lời gọi SUM(first+last) nào thì thay ngay bằng (first+last)
 
-
+### **Inline**
+   
+> - Được xử lý bởi compiler
+> - Được khai báo với từ khóa inline
+> - Khi compiler thấy bất kỳ chỗ nào xuất hiện inline function, nó sẽ thay thế chỗ đó bởi định nghĩa của hàm đã được compile tương ứng. –> Phần được thay thế không phải code mà là đoạn code đã được compile
+   
+### **Function**
+   
+> - Hàm bình thường, khi thấy hàm được gọi, chương trình lưu đia chỉ hiện tại vào ***Stack Pointer***, sau đó chỏ con trỏ PC đến phân vùng nhớ của hàm được gọi. Thực thi câu lệnh của hàm được gọi, lấy kết quả lưu vào ***Stack***. Sau đó nó quay lại vào ***Stack Pointer***, lấy địa chỉ đó ra và tiếp tục chạy tiếp chương trình.
 
 
 
