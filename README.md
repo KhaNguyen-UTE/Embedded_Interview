@@ -70,7 +70,7 @@ void Animal::makeNoise() {
 }
 ```
 
-   👉 **Tham số truyền vào phương thức: **  
+   👉 **Tham số truyền vào phương thức:**  
 - Cách 1: Dặt tên trùng với thuộc tính Class bằng cách kết hợp toán tử :: và con trỏ _this_\
 - Cách 2: Đặt tên khác với thuộc tính ( thường thêm dấu "_" trước tên tham số giống thuộc tính private
    
