@@ -2,7 +2,7 @@
 -------------------------------------------------------------
 ## 🧾Documents
 
-###  💊C 
+### 💊C 
 ### 💊C++      
 <details>
 
@@ -47,7 +47,7 @@ cout << firstName << ' ' << lastName;
    > Phương thức cũng giống như một hàm bình thường. Nó có thể có hoặc không có tham số, không trả về giá trị và thậm chí là override hàm.
      Đối với phương thức thì có **hai cách** định nghĩa thi hành: định nghĩa thi hành trong lúc định nghĩa class và định nghĩa thi hành bên ngoài class.
  
-   👉 Định nghĩa thi hành bên trong class:
+   👉** Định nghĩa thi hành bên trong class:**
 ```ruby
 class Animal {
  public:
@@ -58,7 +58,7 @@ class Animal {
 };
 ```
    
-   👉 Định nghĩa thi hành bên ngoài class:
+   👉 **Định nghĩa thi hành bên ngoài class:**
 ```ruby
 class Animal {
  public:
@@ -70,7 +70,7 @@ void Animal::makeNoise() {
 }
 ```
 
-   👉 Tham số truyền vào phương thức:   
+   👉 **Tham số truyền vào phương thức: **  
 - Cách 1: Dặt tên trùng với thuộc tính Class bằng cách kết hợp toán tử :: và con trỏ _this_\
 - Cách 2: Đặt tên khác với thuộc tính ( thường thêm dấu "_" trước tên tham số giống thuộc tính private
    
@@ -96,20 +96,20 @@ void Animal::makeNoise() {
 ### Các đặc tính của lập trình hướng đối tượng
 > Có 4 đặc tính: Kế thừa, Trừu tượng, Đa hình và Đóng gói
 
-👉 Tính kế thừa / Inheritance 
+👉 **Tính kế thừa / Inheritance **
 - Có 3 loại kế thừa : public, private và protected
    
    > Có nghĩa là một Class có thể kế thừa lại Class trước đó. Class kế thừa được gọi là Class con hay còn gọi là _subclass_. Class được kế thừa gọi là class cha hay còn gọi là _superclass_. Ngoài ra còn có thể mở rộng thêm các thành phần kế thừa và bổ sung thêm các thành phần mới.
    
-👉 Tính trừu tượng / Abstraction 
+👉 **Tính trừu tượng / Abstraction **
 - Chỉ cần biết kết quả chứ không quan tâm cách làm
    > Là một khả năng mà chương trình có thể bỏ qua sự phức tạp bằng cách tập trung vào cốt lõi của thông tin cần xử lý. Điều đó có nghĩa, bạn có thể xử lý một đối tượng bằng cách gọi tên một phương thức và thu về kết quả xử lý, mà không cần biết làm cách nào đối tượng đó được các thao tác trong class.
 
-👉 Tính đa hình / Polymorphism
+👉 **Tính đa hình / Polymorphism**
 - Có thể đạt được đa hình theo kiểu ghi đè phương thức (Method Overriding) hoặc nạp chồng phương thức ( Method Overloading)
    > Là một khả năng mà một phương thức trong class có thể đưa ra các kết quả hoàn toàn khác nhau, tùy thuộc vào dữ liệu được xử lý.
    
-👉 Tính đóng gói / Encapsulation
+👉 **Tính đóng gói / Encapsulation**
 - Mỗi thuộc tính sẽ có phạm vi truy cập hay còn gọi là access modifier -> Private
    > Có ý nghĩa không cho phép người sử dụng các đối tượng thay đổi trạng thái nội tại của một đối tượng, mà chỉ có phương thức nội tại của đối tượng có thể thay đổi chính nó. Điều đó có nghĩa, dữ liệu và thông tin sẽ được đóng gói lại, giúp các tác động bên ngoài một đối tượng không thể làm thay đổi đối tượng đó, nên sẽ đảm bảo tính toàn vẹn của đối tượng, cũng như giúp dấu đi các dữ liệu thông tin cần được che giấu.
 
