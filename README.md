@@ -7,7 +7,7 @@
 
 <details>
 
-<summary>🔸 **Introduce**</summary>
+<summary>🔸 **Introduce** </summary>
    
 > - C là một ngôn ngữ lập trình cấp trung được phát triển bởi Dennis M. Ritchie để phát triển hệ điều hành UNIX tại Bell Labs. C được thực thi lần đầu tiên trên máy tính DEC PDP-11 vào năm 1972. 
 > - Năm 1978, Brian Kernighan và Dennis Ritchie đưa ra mô tả C đầu tiên công khai về C, nay được gọi là tiêu chuẩn K & R.
