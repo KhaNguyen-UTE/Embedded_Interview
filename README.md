@@ -118,7 +118,7 @@
 
 <summary>🔸 Pointer</summary>    
 
-### Tổng quát
+### **Tổng quát**
 
 > Bộ nhớ RAM chứa rất nhiều ô nhớ, mỗi ô nhớ có kích thước 1 byte.
 > Mỗi ô nhớ có địa chỉ duy nhất và địa chỉ này được đánh số từ 0 trở đi. Nếu CPU 32 bit thì có 2^32 địa chỉ có thể đánh cho các ô nhớ trong RAM.
@@ -131,32 +131,49 @@
  
 > Địa chỉ của biến bản chất cũng là một con số thường được biểu diễn ở hệ cơ số 16. Ta có thể sử dụng con trỏ (pointer) để lưu địa chỉ của các biến.
    
+### **Con trỏ là gì**
+   
+> Trong ngôn ngữ C/C++, con trỏ (pointer) là những biến lưu trữ địa chỉ bộ nhớ của những biến khác.
+   
+![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/de60652b-39ca-484f-a139-58c742ae50f3)
+ 
+> Trong hình trên, biến var lưu giá trị 5 có địa chỉ là 0x61ff08. Biến pointVar là biến con trỏ, lưu địa chỉ của biến var (trỏ đến vùng nhớ của biến var), tức là nó lưu giá trị 0x61ff08.
+   
+🔹 **Con trỏ NULL**
+> Con trỏ NULL là con trỏ lưu địa chỉ 0x00000000. Tức địa chỉ bộ nhớ 0, có ý nghĩa đặc biệt, cho biết con trỏ không trỏ vào đâu cả.
+   
+```ruby
+int *p2;//con trỏ chưa khởi tạo, vẫn trỏ đến một vùng nhớ nào đó không xác định
+int *p3 = NULL;//con trỏ null không trỏ đến vùng nhớ nào
+```   
+🔹 **Kích thước của con trỏ**
+   
+Ví dụ các khai báo con trỏ sau:
 
+```ruby   
+char *p1;
+int *p2;
+float *p3;
+double *p4;
+```
+   
+> ❗ Con trỏ chỉ lưu địa chỉ nên kích thước của mọi con trỏ là ***như nhau***. Kích thước này phụ thuộc vào môi trường hệ thống máy tính:
+>> - Môi trường Windows 32 bit: 4 bytes
+>> - Môi trường Windows 64 bit: 8 bytes
+   
+🔹 **Một số lưu ý khi sử dụng con trỏ**
+ 
+Khi khởi tạo con trỏ NULL -> Chữ NULL phải viết hoa, viết thường null sẽ bị lỗi
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```ruby   
+int *p1 = NULL;//đúng
+int *p2 = null;//lỗi
+```
+   
+Không nên sử dụng con trỏ khi chưa được khởi tạo. Kết quả tính toán có thể sẽ phát sinh những lỗi không lường trước được nếu chưa khởi tạo con trỏ.
+Sử dụng biến con trỏ sai cách.
+   
+</details>   
    
 ##
 
