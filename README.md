@@ -46,8 +46,7 @@ cout << firstName << ' ' << lastName;
    
    > Phương thức cũng giống như một hàm bình thường.
      Đối với phương thức thì có **hai cách** định nghĩa thi hành: định nghĩa thi hành trong lúc định nghĩa class và định nghĩa thi hành bên ngoài class.
-</details>
-
+ 
 Định nghĩa thi hành bên trong class:
 ```ruby
 class Animal {
@@ -58,4 +57,44 @@ class Animal {
  }
 };
 ```
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+</details>
+
+
 
