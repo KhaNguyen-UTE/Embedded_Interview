@@ -6,7 +6,7 @@
 ### 💊C++      
 <details>
 
-<summary>🔸 Class</summary>
+<summary>🔸 **Class**</summary>
    
 ###      Khái niệm
    > Class hay lớp là một mô tả trừu tượng (abstract) của nhóm các đối tượng (object) có cùng bản chất, ngược lại mỗi một đối tượng là một thể hiện cụ thể (instance) cho những mô tả trừu tượng đó. Một class trong C++ sẽ có các đặc điểm sau:
