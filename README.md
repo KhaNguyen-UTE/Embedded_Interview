@@ -123,11 +123,33 @@ void Animal::makeNoise() {
    > Namespace là từ khóa trong C++ được sử dụng để định nghĩa một phạm vi nhằm mục đích phân biệt các hàm, lớp, biến, ... cùng tên trong các thư viện khác nhau. Thông thưognf ta hay dùng namespace "std" trong thư viện iostream
 
 ### Templete
-   > - Là một từ khóa trong C++, và là một kiểu dữ liệu trừu tượng tổng quát hóa cho các kiểu dữ liệu int, float, double, bool...
-   
-     - Template trong C++ có **2 loại** đó là _ function template_ & _class template_.
-   
-     - Template giúp người lập trình định nghĩa tổng quát cho hàm và lớp thay vì phải nạp chồng (overloading) cho từng hàm hay phương thức với những kiểu dữ liệu khác nhau.
+   > Là một từ khóa trong C++, và là một kiểu dữ liệu trừu tượng tổng quát hóa cho các kiểu dữ liệu int, float, double, bool...
+     Template trong C++ có **2 loại** đó là _ function template_ & _class template_.
+     Template giúp người lập trình định nghĩa tổng quát cho hàm và lớp thay vì phải nạp chồng (overloading) cho từng hàm hay phương thức với những kiểu dữ liệu khác nhau.
 
+</details>
+
+<details>
+
+<summary>🔸Virtual</summary>
+   
+> Là một hàm thành viên trong lớp cơ sở mà lớp dẫn xuất khi kế thừa cần ***phải định nghĩa lại***.
+> Hàm ảo được sử dụng trong lớp cơ sở khi cần đảm bảo hàm ảo đó sẽ được định  nghĩa lại trong lớp dẫn xuất. Việc này rất cần thiết trong trường hợp con trỏ có  kiểu là lớp cơ sở trỏ đến _đối tượng của lớp dẫn xuất_ ( hàm dẫn xuất được coi là khốp với lớp cơ sở nếu có cùng tên, loại tham số 'cho dù có là const' và kiểu trả về của hàm trong lớpcơ sở. Các hàm như vậy được gọi là ghi đè (Overiding).
+> Hàm ảo chỉ khác hàm thành phần thông thường khi được gọi từ một con trỏ. Sử  dụng hàm ảo khi muốn con trỏ đang trỏ tới đối tượng của lớp nào thì hàm thành phần của lớp đó sẽ được gọi mà không xem xét đến kiểu của con trỏ.
+   
+❗**Lưu ý**: Con trỏ của lớp cơ sở có thể chứa địa chỉ của đối tượng thuộc lớp dẫn xuất, nhưng ngược lại thì không được.
+   
+</details>
+
+<details>
+
+<summary>🔸Vector</summary>
+   
+> Giống như là mảng (array), vector trong C++ là một đối tượng dùng để chứa các đối  tượng khác, và các đối tượng được chứa này cũng được lưu trữ một cách liên tiếp  trong vector. Tuy nhiên, nếu như số lượng phần tử (size) của một mảng là cố định, thì ở vector, nó hoàn toàn có thể _thay đổi_ trong suốt quá trình làm việc của chương trình. 
+
+📓 **Modifiers**
+   
+   
+   
 </details>
 
