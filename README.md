@@ -69,7 +69,10 @@ void Animal::makeNoise() {
  cout << sound;
 }
 ```
-   
+
+### Constructor
+> Constructor hay hàm dựng là một hàm đặc biệt, nó sẽ được gọi ngay khi chúng ta 
+khởi tạo một object.
    
    
    
