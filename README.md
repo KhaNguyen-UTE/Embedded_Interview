@@ -7,8 +7,7 @@
 
 <details>
 
-<summary>
-🔸 **Introduce**
+<summary> 🔸 **Introduce**
    
 </summary>
    
