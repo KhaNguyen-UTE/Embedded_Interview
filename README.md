@@ -15,3 +15,8 @@
             (instance) cho những mô tả trừu tượng đó. Một class trong C++ sẽ có các đặc điểm sau:  Một class bao gồm các thành phần dữ liệu (thuộc tính hay property) và các               phương thức (hàm thành phần hay method).  Class thực chất là một kiểu dữ liệu do người lập trình định nghĩa.  Trong C++, từ khóa class sẽ chỉ điểm bắt đầu của
             một class sẽ được cài đặt.
 </details>
+
+
+<sup> 
+          kha
+</sup>
