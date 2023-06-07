@@ -3,20 +3,22 @@
 ## 🧾Documents
 -------------------------------------------------------------
 
-### 💊C 
+### 💊C
+
 <details>
 
 <summary>🔸 Introduce/summary>
    
-> C là một ngôn ngữ lập trình cấp trung được phát triển bởi Dennis M. Ritchie để phát triển hệ điều hành UNIX tại Bell Labs. C được thực thi lần đầu tiên trên máy tính DEC PDP-11 vào năm 1972. 
-> Năm 1978, Brian Kernighan và Dennis Ritchie đưa ra mô tả C đầu tiên công khai về C, nay được gọi là tiêu chuẩn K & R.
-> Ngôn ngữ C được phát triển để tạo ra các ứng dụng hệ thống trực tiếp tương tác với các thiết bị phần cứng như trình điều khiển, kernals vv.
-> Ngôn ngữ lập trình Java, Hệ điều hành UNIX, trình biên dịch C và tất cả các chương trình ứng dụng UNIX đều đã được viết bằng C.
-> Lập trình C được coi là cơ sở cho các ngôn ngữ lập trình khác, đó là lý do tại sao nó được biết đến như là ngôn ngữ mẹ. Hầu hết các trình biên dịch, JVMs, Kernals vv được viết bằng ngôn ngữ C và hầu hết các ngôn ngữ theo cú pháp C, như C ++, Java vv.
-> Nó cung cấp các khái niệm cốt lõi như mảng, chức năng, xử lý tập tin vv được sử dụng trong nhiều ngôn ngữ như C ++, java, C # v.v.
+> - C là một ngôn ngữ lập trình cấp trung được phát triển bởi Dennis M. Ritchie để phát triển hệ điều hành UNIX tại Bell Labs. C được thực thi lần đầu tiên trên máy tính DEC PDP-11 vào năm 1972. 
+> - Năm 1978, Brian Kernighan và Dennis Ritchie đưa ra mô tả C đầu tiên công khai về C, nay được gọi là tiêu chuẩn K & R.
+> - Ngôn ngữ C được phát triển để tạo ra các ứng dụng hệ thống trực tiếp tương tác với các thiết bị phần cứng như trình điều khiển, kernals vv.
+> - Ngôn ngữ lập trình Java, Hệ điều hành UNIX, trình biên dịch C và tất cả các chương trình ứng dụng UNIX đều đã được viết bằng C.
+> - Lập trình C được coi là cơ sở cho các ngôn ngữ lập trình khác, đó là lý do tại sao nó được biết đến như là ngôn ngữ mẹ. Hầu hết các trình biên dịch, JVMs, Kernals vv được viết bằng ngôn ngữ C và hầu hết các ngôn ngữ theo cú pháp C, như C ++, Java vv.
+> - Nó cung cấp các khái niệm cốt lõi như mảng, chức năng, xử lý tập tin vv được sử dụng trong nhiều ngôn ngữ như C ++, java, C # v.v.
    
    
-</details>   
+</details>
+   
 ##
 
 ### 💊C++      
