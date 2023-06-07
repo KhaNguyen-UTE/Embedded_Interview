@@ -41,4 +41,9 @@ cout << firstName << ' ' << lastName;
 ▪ Các thuộc tính private thường được sử dụng khi bạn không mong muốn người khác có thể tùy ý gán giá trị hoặc là bạn muốn xử lý trước khi trả về giá trị.
 ▪ Đối với protected, các phương thức và thuộc tính chỉ có thể truy cập qua các class kế thừa nó hoặc chính nó.
 ```
+   
+### Method declaration
+   
+   > Phương thức cũng giống như một hàm bình thường.
+     Đối với phương thức thì có hai cách định nghĩa thi hành: định nghĩa thi hành trong lúc định nghĩa class và định nghĩa thi hành bên ngoài class.
 </details>
