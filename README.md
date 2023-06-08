@@ -3,6 +3,28 @@
 ## 🧾Documents
 -------------------------------------------------------------
 
+### 💊 Bitwise operation
+
+<details>
+
+<summary> 🔸 Bitwise operators</summary>
+   
+### **AND**   
+ 
+Tương tự phép nhân
+Ký hiệu: &
+   
+|  A  |  B  | A & B |
+---------------------
+|  0  |  0  |   0   |
+|  0  |  1  |   0   |
+|  1  |  0  |   0   |
+|  1  |  1  |   1   |
+   
+</details>
+   
+##
+
 ### 💊 C
 
 <details>
