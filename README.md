@@ -7,7 +7,7 @@
 
 <details>
 
-<summary> 🔸 #### Bitwise operators</summary>
+<summary> 🔸 Bitwise operators</summary>
    
 ### **AND**   
  
