@@ -11,8 +11,8 @@
    
 ### **AND**   
  
-Tương tự phép nhân
-Ký hiệu: &
+> Tương tự phép nhân
+> Ký hiệu: &
    
 |  A  |  B  | A & B |
 | --- | --- | ----- |
@@ -20,6 +20,13 @@ Ký hiệu: &
 |  0  |  1  |   0   |
 |  1  |  0  |   0   |
 |  1  |  1  |   1   |
+
+> Dùng toán tử AND để kiểm tra tính chẵn lẽ của số nhị phân dễ dàng hoặc xóa các bit trong một thanh ghi.
+> ```ruby
+> 0110 (số thập phân 6)
+> AND 1101 (số thập phân 13)  // xóa đi bit thứ 2
+> = 0100 (số thập phân 4)
+> ```
    
 </details>
    
