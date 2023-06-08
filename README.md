@@ -35,22 +35,21 @@
 > - Tương tự phép cộng
 > - Ký hiệu: **|**
    
-|  A  |  B  | A | B |
+|  A  |  B  | A or B |
 | --- | --- | ----- |
 |  0  |  0  |   0   |
 |  0  |  1  |   1   |
 |  1  |  0  |   1   |
 |  1  |  1  |   1   |
 
-> Phép toán thao tác bit OR có thể được sử dụng để thiết đặt bit được chọn thành 1. Ví dụ: Nó có thể được sử dụng để bật (set) một bit (hoặc cờ) trong thanh ghi, trong đó mỗi bit đại diện cho một trạng thái trong phép logic đúng sai (boolean). Vì thế, 0010 (số 2 thập phân) có thể được xem là một bộ 4 cờ, trong đó cờ thứ nhất, thứ ba và thứ tư là trống (0)  và cờ thứ hai được bật (1). Cờ thứ tư có thể được bật bằng cách thực hiện phép toán thao tác bit OR giữa giá trị này và một dãy bit với duy nhất bộ bit thứ 4:
+> - Phép toán thao tác bit OR có thể được sử dụng để thiết đặt bit được chọn thành 1. Ví dụ: Nó có thể được sử dụng để bật (set) một bit (hoặc cờ) trong thanh ghi, trong đó mỗi bit đại diện cho một trạng thái trong phép logic đúng sai (boolean). Vì thế, 0010 (số 2 thập phân) có thể được xem là một bộ 4 cờ, trong đó cờ thứ nhất, thứ ba và thứ tư là trống (0)  và cờ thứ hai được bật (1). Cờ thứ tư có thể được bật bằng cách thực hiện phép toán thao tác bit OR giữa giá trị này và một dãy bit với duy nhất bộ bit thứ 4:
 > ```ruby
 > 0010 (số thập phân 2)
 > OR 1000 (số thập phân 8)
 > 1010 (số thập phân 10)
 > ```
-> Kỹ thuật này là một cách hiệu quả để lưu trữ một số trong những giá trị phép toán logic đúng sai (boolean) sử dụng ít bộ nhớ nhất có thể.
-
-> Khi làm việc với các máy không có nhiều không gian bộ nhớ trống, các lập trình viên thường áp dụng kĩ thuật trên. Lúc đó, thay vì khai báo tám biến kiểu bool (C++) độc lập, người ta sử dụng từng bit riêng lẻ của một byte để biểu diễn giá trị cho tám biến đó.`
+> - Kỹ thuật này là một cách hiệu quả để lưu trữ một số trong những giá trị phép toán logic đúng sai (boolean) sử dụng ít bộ nhớ nhất có thể.
+> - Khi làm việc với các máy không có nhiều không gian bộ nhớ trống, các lập trình viên thường áp dụng kĩ thuật trên. Lúc đó, thay vì khai báo tám biến kiểu bool (C++) độc lập, người ta sử dụng từng bit riêng lẻ của một byte để biểu diễn giá trị cho tám biến đó.`
    
 </details>
 
