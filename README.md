@@ -27,8 +27,6 @@
 > AND 1101 (số thập phân 13)  // xóa đi bit thứ 2
 > = 0100 (số thập phân 4)
 > ```
-   
-
 
 ### **OR**   
  
@@ -80,7 +78,6 @@
 |  0  |  1  | 
 |  1  |  0  |  
     
-   
 </details>
 
 <details>
@@ -321,8 +318,7 @@ Sử dụng biến con trỏ sai cách.
 > - Một class bao gồm các thành phần dữ liệu (thuộc tính hay property) và các phương thức (hàm thành phần hay method).
 > - Class thực chất là một kiểu dữ liệu do người lập trình định nghĩa.
 > - Trong C++, từ khóa class sẽ chỉ điểm bắt đầu của một class sẽ được cài đặt.
-
-   
+ 
 ### Khai báo class và sử dụng class
    
 ```ruby
@@ -344,7 +340,6 @@ cout << firstName << ' ' << lastName;
 > - Các thuộc tính private thường được sử dụng khi bạn không mong muốn người khác có thể tùy ý gán giá trị hoặc là bạn muốn xử lý trước khi trả về giá trị.
 > - Đối với protected, các phương thức và thuộc tính chỉ có thể truy cập qua các class kế thừa nó hoặc chính nó.
 
-   
 ### Method declaration
    
    > Phương thức cũng giống như một hàm bình thường. Nó có thể có hoặc không có tham số, không trả về giá trị và thậm chí là override hàm.
@@ -388,7 +383,6 @@ void Animal::makeNoise() {
 > Static member hay thành viên tĩnh trong class C++ cũng tương tự như với static variable (biến tĩnh) trong function. Đối với function, sau khi thực hiện xong khối lệnh và thoát thì biến tĩnh vẫn sẽ không mất đi. Đối với class, thành viên tĩnh sẽ là thuộc tính dùng chung cho tất cả các đối tượng của class đó, cho dù là không có đối tượng nào tồn tại. Tức là bạn có thể khai báo nhiều object, mỗi object các thuộc tính của nó đều khác nhau nhưng riêng static thì chỉ có một và static member tồn tại trong suốt chương trình cho dù có hay không có object nào của nó hay nói ngắn gọn là dùng chung một biến static.
 
 </details>
-
 
 <details>
 
@@ -500,6 +494,5 @@ ten-vector-1.swap(ten-vector-2);
 ten-vector.clear();  
 ``` 
 
-   
 </details>
 
