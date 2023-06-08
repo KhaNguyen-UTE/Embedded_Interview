@@ -102,9 +102,8 @@ Các phép dịch chuyển bit đôi khi được xem là các phép toán thao 
 = 11001011 (số thập phân -53)
    
 ```
-   
-![Rotate_right_arithmetically](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/a56a7f42-32e0-400c-a1bb-c141803f304e)
-   
+![Rotate_right_arithmetically](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/77f3b802-59c4-40b5-9072-61add1becacf)
+      
 </details>   
 
 
