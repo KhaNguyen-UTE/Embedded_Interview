@@ -102,26 +102,38 @@ Các phép dịch chuyển bit đôi khi được xem là các phép toán thao 
 = 11001011 (số thập phân -53)
    
 ```
-![Rotate_right_arithmetically](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/77f3b802-59c4-40b5-9072-61add1becacf)
-      
-</details>   
+![Rotate_right_arithmetically](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/77f3b802-59c4-40b5-9072-61add1becacf)        
 
+### **Dịch chuyển luận lý** 
 
+> - Trong dịch chuyển luận lý, các số 0 sẽ được dịch chuyển vào để thay thế các bit bị loại bỏ. Do đó dịch chuyển luận lý và dịch chuyển số học bên trái là hoàn toàn giống nhau.
+> - Tuy nhiên, dịch chuyển luận lý thêm giá trị 0 vào vị trí bit quan trọng nhất, thay vì sao chép bit mang dấu, điều này khá lý tưởng cho các số nhị phân không dấu, trong khi phép dịch chuyển số học sang phải thì lại lý tưởng cho các số nhị phân bù 2 có dấu.
+![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/65484fc0-d8b1-4b78-bfbd-a4690e21ff30)
 
+### **Quay không nhớ**
 
+> Một dạng khác của dịch chuyển được gọi là dịch chuyển vòng hay quay bit. Với phép toán này, các bit được xoay giống như là hai đầu của thanh ghi được gộp lại với nhau. Những giá trị được dịch chuyển vào ở bên phải trong một lần dịch chuyển trái chính là bất kỳ giá trị nào đã được dịch chuyển ra ở bên trái, và ngược lại. Thao tác này hữu ích nếu xảy ra yêu cầu giữ lại toàn bộ bit hiện thời, và thường được sử dụng trong mật mã học kỹ thuật số.
 
+![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/3b1f04d5-6009-4486-9850-c6478276214b)
 
+### **Quay có nhớ**
 
+> - Quay có nhớ tương tự với phép quay không nhớ, nhưng hai đầu của thanh ghi được tách ra bởi cờ nhớ (carry flag). Bit được dịch chuyển vào (ở bất kỳ đầu nào) là giá trị cũ của cờ nhớ, và bit được dịch chuyển ra (ở đầu còn lại) trở thành giá trị mới của cờ nhớ.
+> - Một phép quay có nhớ có thể mô phỏng một phép quay luận lý hoặc số học của một vị trí bằng cách thiết lập cờ nhớ trước tiên. Ví dụ, nếu cờ nhớ mang giá trị 0, thì x XOAY-PHẢI-CÓ-NHỚ-MỘT-LẦN là phép dịch chuyển luận lý sang phải, và nếu cờ nhớ giữ giá trị của bản sao chép của bit chứa dấu, thì x XOAY-PHẢI-CÓ-NHỚ-MỘT-LẦNlà phép dịch chuyển số học sang phải. Vì lý do này, một số vi điều khiển như các PIC tầm thấp chỉ có xoay và xoay có nhớ, mà không cần đến các cấu trúc dịch chuyển số học và luận lý.
 
+### **👉 Dịch chuyển trong C, C++, C# và Python**
 
+Trong các ngôn ngữ dựa trên C, các toán tử dịch chuyển trái và phải lần lượt là << và >>. Số lượng cần dịch chuyển được cung cấp ở đối số thứ hai của toán tử dịch chuyển. 
 
+> Ví dụ:
+> ```ruby
+> x = y << 2;
+> ```
+> gán cho x kết quả của phép dịch chuyển y sang trái 2 bit, tương đương với phép nhân với 4.
 
+Trong ngôn ngữ C, kết quả của việc dịch chuyển sang phải một giá trị âm là xác định, và giá trị của phép dịch chuyển sang trái của giá trị chứa dấu là không xác định nếu kết quả không được thể hiện dưới dạng của kết quả. Trong C#, phép dịch chuyển sang phải là một phép dịch chuyển số học khi mà toán hạng là biến kiểu int hoặc long. Nếu toán hạng đầu tiên thuộc kiểu uint hoặc ulong, phép dịch chuyển sang phải là phép dịch chuyển luận lý.
 
-
-
-
-
-
+</details> 
 
 ##
 
