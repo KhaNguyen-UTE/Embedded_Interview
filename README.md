@@ -83,6 +83,31 @@
    
 </details>
 
+<details>
+
+<summary> 🔸 Bitwise operators</summary>
+
+Các phép dịch chuyển bit đôi khi được xem là các phép toán thao tác bit, bởi vì chúng sẽ xem một giá trị dưới dạng một dãy bit hơn là dưới dạng số lượng số (numerial quantity). Trong các phép toán này, các chữ số sẽ được di chuyển, hoặc dịch chuyển, sang trái hoặc phải. Các thanh ghi trong vi xử lý máy tính có độ dài cố định, vì vậy một vài bit sẽ bị "dịch chuyển ra ngoài" thanh ghi ở một đầu, trong khi đó thì một lượng bit tương ứng sẽ được "dịch chuyển vào" ở đầu còn lại; sự khác biệt ở các phép toán dịch chuyển bit nằm ở chỗ cách chúng xác định giá trị của các bit được dịch chuyển vào.   
+   
+### **Dịch chuyển số học**   
+   
+> Trong dịch chuyển số học, các bit được dịch chuyển ra khỏi đầu hoặc đuôi sẽ bị loại bỏ. Trong phép dịch chuyển số học về bên trái, các số 0 được dịch chuyển vào bên phải; trong phép dịch chuyển số học bên phải, bit thể hiện dấu được thêm vào bên trái, do đó dấu của số được giữ nguyên.   
+
+```ruby
+   
+00010111 (số thập phân +23) Dịch chuyển trái
+= 00101110 (số thập phân +46)
+   
+10010111 (số thập phân -105) Dịch chuyển phải
+= 11001011 (số thập phân -53)
+   
+```
+![Uploading Rotate_right_arithmetically.png…]()
+ 
+   
+   
+</details>   
+
 
 
 
