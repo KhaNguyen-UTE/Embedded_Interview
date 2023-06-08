@@ -45,11 +45,41 @@
 > - Phép toán thao tác bit OR có thể được sử dụng để thiết đặt bit được chọn thành 1. Ví dụ: Nó có thể được sử dụng để bật (set) một bit (hoặc cờ) trong thanh ghi, trong đó mỗi bit đại diện cho một trạng thái trong phép logic đúng sai (boolean). Vì thế, 0010 (số 2 thập phân) có thể được xem là một bộ 4 cờ, trong đó cờ thứ nhất, thứ ba và thứ tư là trống (0)  và cờ thứ hai được bật (1). Cờ thứ tư có thể được bật bằng cách thực hiện phép toán thao tác bit OR giữa giá trị này và một dãy bit với duy nhất bộ bit thứ 4:
 > ```ruby
 > 0010 (số thập phân 2)
-> OR 1000 (số thập phân 8)
+> OR 1000 (số thập phân 8)  //Bật bit thứ 4 lên
 > 1010 (số thập phân 10)
 > ```
 > - Kỹ thuật này là một cách hiệu quả để lưu trữ một số trong những giá trị phép toán logic đúng sai (boolean) sử dụng ít bộ nhớ nhất có thể.
 > - Khi làm việc với các máy không có nhiều không gian bộ nhớ trống, các lập trình viên thường áp dụng kĩ thuật trên. Lúc đó, thay vì khai báo tám biến kiểu bool (C++) độc lập, người ta sử dụng từng bit riêng lẻ của một byte để biểu diễn giá trị cho tám biến đó.`
+
+### **XOR**   
+ 
+> - Kết quả ở mỗi vị trí là 1 chỉ khi bit đầu tiên là 1 hoặc nếu chỉ khi bit thứ hai là 1, nhưng sẽ là 0 nếu cả hai là 0 hoặc cả hai là 1. Ở đây ta thực hiện phép so sánh hai bit, kết quả là 1 nếu hai bit khác nhau và là 0 nếu hai bit giống nhau.
+> - Ký hiệu: **^**
+   
+|  A  |  B  | A ^ B |
+| --- | --- | ----- |
+|  0  |  0  |   0   |
+|  0  |  1  |   1   |
+|  1  |  0  |   1   |
+|  1  |  1  |   0   |   
+   
+> Phép toán thao tác bit XOR có thể được sử dụng để đảo ngược các bit được lựa chọn trong thanh ghi (còn được gọi là bật (set) hoặc lật (flip)). Bất kỳ bit nào được bật bằng cách thực hiện phép toán thao tác bit XOR nó với 1.
+> ```ruby
+> 0010 (số thập phân 2)
+> XOR 1010 (số thập phân 10)  // Kích hoạt trạng thái bit 2 và 4
+> = 1000 (số thập phân 8)  
+> ```
+
+### **NOT**
+
+>  - Là toán tử một ngôi thực hiện phủ định luận lý trên từng bit, tạo thành bù 1 (one’s complement) của giá trị nhị phân cho trước
+>  - Ký hiệu : **~**
+   
+|  A  |  ~A | 
+| --- | --- | 
+|  0  |  1  | 
+|  1  |  0  |  
+    
    
 </details>
 
