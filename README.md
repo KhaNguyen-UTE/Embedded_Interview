@@ -516,7 +516,8 @@ Giới thiệu
 Hoạt động 
    
 ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/84fffb75-139f-41de-bdd8-a6d448919a01)
-Visit tutorial: https://www.corelis.com/education/tutorials/spi-tutorial/#1
+   
+Visit tutorial: #1(https://www.corelis.com/education/tutorials/spi-tutorial/)
 
 
 
