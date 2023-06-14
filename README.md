@@ -506,18 +506,44 @@ ten-vector.clear();
 
 <summary> 🔸 SPI</summary>
 
-Giới thiệu
+Visit tutorial: https://www.corelis.com/education/tutorials/spi-tutorial/   
+   
+👉**Giới thiệu**
+   
 >  Giao tiếp ngoại vi nối tiếp hoặc SPI (Serial Peripheral Interface) là một chuẩn đồng bộ nối tiếp để truyền dữ liệu ở chế độ song công toàn phần (full – duplex) tức trong cùng một thời điểm có thể xảy ra đồng thời quá trình truyền và nhận.
 > Giao tiếp ngoại vi nối tiếp (SPI) là một loại giao thức kiểu Master – Slave cung cấp một giao diện chi phí đơn giản và chi phí thấp giữa vi điều khiển và các thiết bị ngoại vi của nó.
 > SPI thường được sử dụng giao tiếp với bộ nhớ EEPROM, RTC (Đồng hồ thời gian thực), IC âm thanh, các loại cảm biến như nhiệt độ và áp suất, thẻ nhớ như MMC hoặc thẻ SD hoặc thậm chí các bộ vi điều khiển khác.
 > Là giao tiếp đồng bộ, bất cứ quá trình nào cũng đều được đồng bộ với xung clock sinh ra bởi thiết bị Master  ► Không cần phải lo lắng về tốc độ truyền dữ liệu.
 ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/a1e3c512-ca02-419a-a168-592d21b73199)
    
-Hoạt động 
+👉**Hoạt động** 
    
 ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/84fffb75-139f-41de-bdd8-a6d448919a01)
    
-Visit tutorial: #1(https://www.corelis.com/education/tutorials/spi-tutorial/)
+> Trong giao thức SPI, có thể chỉ có một thiết bị Master nhưng nhiều thiết bị Slave.
+> Bus SPI bao gồm _4 tín hiệu hoặc chân_ . Chúng là:
+>> - Master – Out / Slave – In ( **MOSI** hay **SI**): cổng ra của bên Master, cổng vào của bên Slave, dành cho việc truyền dữ liệu từ thiết bị Master  đến thiết bị Slave .
+>> - Master – In / Slave – Out ( **MISO** hay **SO**): cổng vào của bên Master, cổng ra của bên Slave, dành cho việc truyền dữ liệu từ thiết Slave đến thiết bị Master.
+>> - Serial Clock (SCK hay SCLK): xung giữ nhịp cho giao tiếp SPI
+>> - Chip Select (CS) hay Slave Select (SS): chọn chip, thường SS = 0 chỉ định Slave hoạt động
+> ❗ Lưu ý: Mỗi thời điểm bất kì 1 Master chỉ giao tiếp 1 Slave nhưg do tốc độ nhanh nên khó phân biệt.
+   
+Cách truyền và nhận dữ liệu
+   
+   ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/33333b74-f7da-48da-a887-a58c66c0f0d0)
+
+   
+> Mỗi chip Master hay Slave sẽ có một thanh ghi dữ liệu 8 bit chứa dữ liệu cần gửi đi hoặc dữ liệu nhận về.
+> Cứ mỗi xung nhịp do Master tạo ra trên chân SCLK, một bit trong thanh ghi dữ liệu của Master được truyền qua Slave trên đường MOSI, đồng thời một bit trong thanh ghi dữ liệu của Slave cũng được truyền qua cho Master trên đường MISO.
+> _Cứ mỗi một xung nhịp của xung clock(chân SCLK kéo từ 0 lên 1 rồi về 0) tức là output, dữ liệu nó đã truyền đi xong, thì lúc này nó sẽ trỏ tới cái phần tử, data tiếp theo trong mảng rồi tiếp tục làm như v. (đại khái là sử dụng chân sclk để đồng bộ)._
+
+Các chế độ hoạt động
+
+> Có 4 chế độ hoạt động
+   
+   ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/983fbaac-31a7-4459-a5af-83bb2c0875e9)
+
+  
 
 
 
