@@ -496,3 +496,28 @@ ten-vector.clear();
 
 </details>
 
+
+
+##
+
+### 💊 VĐK
+
+<details>
+
+<summary> 🔸 SPI</summary>
+
+Giới thiệu
+>  Giao tiếp ngoại vi nối tiếp hoặc SPI (Serial Peripheral Interface) là một chuẩn đồng bộ nối tiếp để truyền dữ liệu ở chế độ song công toàn phần (full – duplex) tức trong cùng một thời điểm có thể xảy ra đồng thời quá trình truyền và nhận.
+> Giao tiếp ngoại vi nối tiếp (SPI) là một loại giao thức kiểu Master – Slave cung cấp một giao diện chi phí đơn giản và chi phí thấp giữa vi điều khiển và các thiết bị ngoại vi của nó.
+> SPI thường được sử dụng giao tiếp với bộ nhớ EEPROM, RTC (Đồng hồ thời gian thực), IC âm thanh, các loại cảm biến như nhiệt độ và áp suất, thẻ nhớ như MMC hoặc thẻ SD hoặc thậm chí các bộ vi điều khiển khác.
+> Là giao tiếp đồng bộ, bất cứ quá trình nào cũng đều được đồng bộ với xung clock sinh ra bởi thiết bị Master  ► Không cần phải lo lắng về tốc độ truyền dữ liệu.
+![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/a1e3c512-ca02-419a-a168-592d21b73199)
+   
+Hoạt động 
+   
+![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/84fffb75-139f-41de-bdd8-a6d448919a01)
+Visit tutorial: https://www.corelis.com/education/tutorials/spi-tutorial/#1
+
+
+
+
