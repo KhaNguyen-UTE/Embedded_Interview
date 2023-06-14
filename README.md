@@ -520,8 +520,8 @@ Visit tutorial: https://www.corelis.com/education/tutorials/spi-tutorial/
    
 ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/84fffb75-139f-41de-bdd8-a6d448919a01)
    
-> Trong giao thức SPI, có thể chỉ có một thiết bị Master nhưng nhiều thiết bị Slave.
-> Bus SPI bao gồm _4 tín hiệu hoặc chân_ . Chúng là:
+> - Trong giao thức SPI, có thể chỉ có một thiết bị Master nhưng nhiều thiết bị Slave.
+> - Bus SPI bao gồm _4 tín hiệu hoặc chân_ . Chúng là:
 >> - Master – Out / Slave – In ( **MOSI** hay **SI**): cổng ra của bên Master, cổng vào của bên Slave, dành cho việc truyền dữ liệu từ thiết bị Master  đến thiết bị Slave .
 >> - Master – In / Slave – Out ( **MISO** hay **SO**): cổng vào của bên Master, cổng ra của bên Slave, dành cho việc truyền dữ liệu từ thiết Slave đến thiết bị Master.
 >> - Serial Clock (SCK hay SCLK): xung giữ nhịp cho giao tiếp SPI
@@ -533,9 +533,9 @@ Cách truyền và nhận dữ liệu
    ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/33333b74-f7da-48da-a887-a58c66c0f0d0)
 
    
-> Mỗi chip Master hay Slave sẽ có một thanh ghi dữ liệu 8 bit chứa dữ liệu cần gửi đi hoặc dữ liệu nhận về.
-> Cứ mỗi xung nhịp do Master tạo ra trên chân SCLK, một bit trong thanh ghi dữ liệu của Master được truyền qua Slave trên đường MOSI, đồng thời một bit trong thanh ghi dữ liệu của Slave cũng được truyền qua cho Master trên đường MISO.
-> _Cứ mỗi một xung nhịp của xung clock(chân SCLK kéo từ 0 lên 1 rồi về 0) tức là output, dữ liệu nó đã truyền đi xong, thì lúc này nó sẽ trỏ tới cái phần tử, data tiếp theo trong mảng rồi tiếp tục làm như v. (đại khái là sử dụng chân sclk để đồng bộ)._
+> - Mỗi chip Master hay Slave sẽ có một thanh ghi dữ liệu 8 bit chứa dữ liệu cần gửi đi hoặc dữ liệu nhận về.
+> - Cứ mỗi xung nhịp do Master tạo ra trên chân SCLK, một bit trong thanh ghi dữ liệu của Master được truyền qua Slave trên đường MOSI, đồng thời một bit trong thanh ghi dữ liệu của Slave cũng được truyền qua cho Master trên đường MISO.
+> - _Cứ mỗi một xung nhịp của xung clock(chân SCLK kéo từ 0 lên 1 rồi về 0) tức là output, dữ liệu nó đã truyền đi xong, thì lúc này nó sẽ trỏ tới cái phần tử, data tiếp theo trong mảng rồi tiếp tục làm như v. (đại khái là sử dụng chân sclk để đồng bộ)._
 
 Các chế độ hoạt động
 
