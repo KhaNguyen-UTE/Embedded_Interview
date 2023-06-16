@@ -51,6 +51,14 @@ void HotelManager::displayCustomerSelection(CustomerManager menu){
             case 1:{
                 RUN_SELECTION("continue to Book another room", next_selection, menu.addCustomer());
             }break;
+
+            case 2:
+            case 3:
+                menu.CheckInorOut(selection);
+                break;
+            case 4:
+                menu.listCustomer();
+
         }
     }
     while (next_selection == '1');
@@ -86,7 +94,6 @@ HotelManager::HotelManager(){
             }break;
             case 2:{
                 RUN_SELECTION("continue as Customer", next_selection, displayCustomerSelection(menu));
-                
             }break;
         }
     }

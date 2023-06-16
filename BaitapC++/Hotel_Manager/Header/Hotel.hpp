@@ -31,16 +31,21 @@ cout << "    - Any key to bak to Main stream" <<endl;        \
 cout << "Your selection: ";                                  \
 cin  >> var;                                                 \
 
+#define PRINT_ZERO(var, text)                                \
+if( var < 10 ) cout <<"0" <<var;                             \
+else cout<<var;                                              \
+cout <<text;                                                 \
+
 typedef struct {
-    uint8_t day;
-    uint8_t month;
-    uint8_t year;
+    int day;
+    int month;
+    int year;
 }typeDate;
 
 typedef struct {
-    uint8_t second;
-    uint8_t minute;
-    uint8_t hour;
+    int second;
+    int minute;
+    int hour;
 }typeTime;
 
 typedef enum{
@@ -125,7 +130,6 @@ class Customer {
         string PHONE_NUMBER;
         string ADDRESS;
         string PASSWORD;
-        vector <BookingHistory> History;
     public:
         Customer (string CusNAme, string CusAdddress, string Cusphone, string CusPassword);
 
@@ -144,6 +148,8 @@ class Customer {
         void addBokking(BookingHistory var);
         void displayBooking();
 
+        vector <BookingHistory> History;
+
         int getID();
 };
 
@@ -159,7 +165,10 @@ class CustomerManager : public Check{
         void addCustomer();
         void editCustomer();
         void deleteCustomer(int ID);
+        void listOneCustomer(int ID);
         void listCustomer();
+        void CheckInorOut(int In_or_Out);
+        void enterHistory(int in_out, int ID);
 };
 
 class Employee{
@@ -210,9 +219,9 @@ class HotelManager{
         vector <Room> Database_Room;
         vector <Customer> Database_Customer;
         void createRoom();
-        void bookRoom(uint8_t roomNumber);
-        void checkIn(uint8_t roomNumber);
-        void checkOut(uint8_t roomNumber);
+        void bookRoom(int roomNumber);
+        void checkIn(int roomNumber);
+        void checkOut(int roomNumber);
         void displayCustomerSelection(CustomerManager menu);
     public:
         HotelManager();

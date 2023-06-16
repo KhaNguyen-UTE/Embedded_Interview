@@ -72,32 +72,32 @@ void Check::check_input(void *text, TypeInput type){
 
         case DAY:{
                 INPUT_DATA_NO_SPACE("Enter day: ", *(int*)text);
-                status = check_limit(*(int*)text, 1, 31);
+                status = check_limit(*(int*)text, 31, 1);
         }break;
 
         case MONTH:{
                 INPUT_DATA_NO_SPACE("Enter month: ", *(int*)text);
-                status = check_limit(*(int*)text, 1, 12);
+                status = check_limit(*(int*)text, 12, 1);
         }break;
 
         case YEAR:{
                 INPUT_DATA_NO_SPACE("Enter year: ", *(int*)text);
-                status = check_limit(*(int*)text, 2022, 2023);
+                status = check_limit(*(int*)text, 2023, 2022);
         }break;
 
         case SECOND:{
                 INPUT_DATA_NO_SPACE("Enter second: ", *(int*)text);
-                status = check_limit(*(int*)text, 0, 59);
+                status = check_limit(*(int*)text, 59, 0);
         }break;
 
         case MINUTE:{
                 INPUT_DATA_NO_SPACE("Enter minute: ", *(int*)text);
-                status = check_limit(*(int*)text, 0, 59);
+                status = check_limit(*(int*)text, 59, 0);
         }break;
 
         case HOUR:{
                 INPUT_DATA_NO_SPACE("Enter hour: ", *(int*)text);
-                status = check_limit(*(int*)text, 1, 12);
+                status = check_limit(*(int*)text, 23, 0);
         }break;
         }                                                                                                         
     }
