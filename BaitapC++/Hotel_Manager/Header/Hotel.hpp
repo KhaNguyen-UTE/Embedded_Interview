@@ -8,6 +8,8 @@
 
 using namespace std;
 
+const int TOTAL_ROOMS = 10;
+
 #define TABLE_DRAW(text_begin, text_mid, text_end, loop_value)                              \
 cout << text_begin;                                                                         \
 for (int i = 0; i < loop_value; i++){                                                       \
@@ -18,6 +20,7 @@ cout << text_end  <<endl;                                                       
 #define INPUT_DATA_NO_SPACE(text, var)                                                      \
 cout << text;                                                                               \
 cin  >> var;                                                                                \
+cout <<endl;                                                                                \
 
 #define INPUT_DATA_HAVE_SPACE(text, name)                                                   \
 cout << text;                                                                               \
@@ -60,12 +63,20 @@ typedef struct {
 }BookingHistory;
 
 typedef enum{
+    DAY_SHIFT,
+    AFTERNOON_SHIFT,
+    NIGHT_SHIFT,
+    ALL_DAY
+}TypeShift;
+
+typedef enum{
+    MANAGER,
     JANITOR,
     RECEPTIONIST,
     LAUNDRY_STAFF,
     LAUGGAGE_STAFF,
     GRADENER
-}JobPosition;
+}TypeJobPosition;
 
 typedef enum{
     NAME,
@@ -89,7 +100,7 @@ class Room{
         Room(int number){
             roomNumber = number;
             isBooked = false;
-            isCleaned = true;
+            isCleaned = false;
         }
 
         int getRoomNumber(){
@@ -97,7 +108,11 @@ class Room{
         }
 
         bool isAvailable(){
-            return !isBooked && isCleaned;
+            return !isBooked && !isCleaned;
+        }
+
+        bool isClean(){
+            return isCleaned;
         }
 
         void bookRoom(){
@@ -112,6 +127,10 @@ class Room{
         void checkOut(){
             isBooked = false;
             isCleaned = true;
+        }
+        void book(){
+            isBooked = false;
+            isCleaned = false;
         }
 };
 
@@ -131,7 +150,7 @@ class Customer {
         string ADDRESS;
         string PASSWORD;
     public:
-        Customer (string CusNAme, string CusAdddress, string Cusphone, string CusPassword);
+        Customer (int ID, string CusNAme, string CusAdddress, string Cusphone, string CusPassword);
 
         string getName();
         void setName(string name);
@@ -146,7 +165,6 @@ class Customer {
         void setPASSWORD(string password);
         
         void addBokking(BookingHistory var);
-        void displayBooking();
 
         vector <BookingHistory> History;
 
@@ -155,20 +173,18 @@ class Customer {
 
 class CustomerManager : public Check{
     private:
-        
-        bool check_password(int ID);
-        bool check_ID(int ID);
         vector <Customer>  *Database_Customer;
     public:
-        
         CustomerManager(vector <Customer> &Database_Customer);
-        void addCustomer();
+        void addCustomer(int id);
         void editCustomer();
         void deleteCustomer(int ID);
         void listOneCustomer(int ID);
         void listCustomer();
         void CheckInorOut(int In_or_Out);
         void enterHistory(int in_out, int ID);
+        bool check_password(int ID);
+        bool check_ID(int ID);
 };
 
 class Employee{
@@ -177,24 +193,24 @@ class Employee{
         string NAME;
         string PHONENUMBER;
         string PASSWORD;
-        JobPosition POSITION;
-        vector <BookingHistory> SCHEDULE;
+        TypeJobPosition POSITION;
+        
     public:
-        Employee(string name, string phone, string password, JobPosition position);
-
+        Employee(string name, string phone, string password, TypeJobPosition position);
+        vector <TypeShift> SHIFT;
         string getName();
         void setName(string name);
 
         string getPHONE_NUMBER();
         void setPHONE_NUMBER(string phone_number);
 
-        JobPosition getPOSITION();
-        void setPOSITION(JobPosition position);
+        TypeJobPosition getPOSITION();
+        void setPOSITION(TypeJobPosition position);
 
         string getPASSWORD();
         void setPASSWORD(string password);
         
-        void addSchedule(BookingHistory var);
+        void addSchedule(TypeShift shift);
         void displaySchedule();
 
         int getID();
@@ -202,27 +218,39 @@ class Employee{
 
 class EmployeeManager : public Check{
     private:
-        vector <Employee> Database_Employee;
-        bool check_password(int ID);
-        bool check_ID(int ID);
-        
+        vector <Employee> *Database_Employee;
+        bool check_num_Manager();
+       
+        void transfer_position(int value, TypeJobPosition *TypeJobPosition);
     public:
-        void transfer_position(int value, JobPosition *jobPosition);
+    
+        EmployeeManager(vector <Employee> &Database_Employee);
+        void createManager();
+        bool check_num_Receptionist();
         void addEmployee();
         void editEmployee();
         void deleteEmployee(int ID);
         void displayEmployee();
+        bool check_password(int ID);
+        bool check_ID(int ID);
+        void addShift(int ID, TypeShift shift);
+         void addShift(int ID);
+        bool check_Position(int ID, TypeJobPosition position);
 };
 
 class HotelManager{
     private:
         vector <Room> Database_Room;
         vector <Customer> Database_Customer;
+        vector <Employee> Database_Employee;
         void createRoom();
         void bookRoom(int roomNumber);
         void checkIn(int roomNumber);
         void checkOut(int roomNumber);
         void displayCustomerSelection(CustomerManager menu);
+        void displayEmployeeSelection(EmployeeManager emp_menu, CustomerManager cus_menu);
+        void SelectionMenu(int selection, EmployeeManager emp_menu, CustomerManager cus_menu);
+        void createManager(vector <Employee> Database_Employee);
     public:
         HotelManager();
         void displayAllRoom();

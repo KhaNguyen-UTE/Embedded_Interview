@@ -6,7 +6,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jun 04 02:58:36 2023
+# Make data base, printed on Tue Jun 06 16:51:23 2023
 
 # Variables
 
@@ -41,7 +41,7 @@ MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\LOCAL\crashpad_29312_EXIUYBRIYQBHNCWS
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\LOCAL\crashpad_17688_VTMSMELZKCEEHMHI
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -71,7 +71,8 @@ PROCESSOR_ARCHITEW6432 = AMD64
 # makefile
 MAKEFLAGS = pqrR
 # environment
-ONEDRIVE = C:\Users\Kha\OneDrive
+ONEDRIVE = C:\Users\Kha\On 
+eDrive
 # makefile
 CURDIR := d:/Learn/Embedded/My_exam/Embedded_Interview_T4/Baitap_Order_do_uong
 # environment
@@ -93,7 +94,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 29312
+VSCODE_PID = 17688
 # environment
 CUDA_PATH = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1
 # automatic
@@ -227,7 +228,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key d:/Learn/Embedded/My_exam/Embedded_Interview_T4/Baitap_Order_do_uong, mtime 1685821104): 9 files, no impossibilities.
+# . (key d:/Learn/Embedded/My_exam/Embedded_Interview_T4/Baitap_Order_do_uong, mtime 1685962146): 9 files, no impossibilities.
 # Source (key d:/Learn/Embedded/My_exam/Embedded_Interview_T4/Baitap_Order_do_uong/Source, mtime 1685735348): 8 files, no impossibilities.
 
 # 17 files, no impossibilities in 2 directories.
@@ -250,7 +251,7 @@ Makefile:
 Source/Manage.cpp:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-06-04 00:53:27
+#  Last modified 2023-06-04 19:24:03
 #  File has been updated.
 #  Successfully updated.
 
@@ -282,7 +283,7 @@ Source/ListBeverage.cpp:
 Source/Staff.cpp:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-06-04 02:36:41
+#  Last modified 2023-06-05 17:54:17
 #  File has been updated.
 #  Successfully updated.
 
@@ -290,7 +291,7 @@ Source/Staff.cpp:
 Source/MainMenu.cpp:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2023-06-04 00:37:49
+#  Last modified 2023-06-04 19:24:00
 #  File has been updated.
 #  Successfully updated.
 
@@ -370,6 +371,6 @@ main: Source/ListBeverage.cpp Source/MainMenu.cpp Source/Manage.cpp Source/Staff
 # strcache performance: lookups = 46 / hit rate = 45%
 # hash-table stats:
 # Load=25/8192=0%, Rehash=0, Collisions=0/46=0%
-# Finished Make data base on Sun Jun 04 02:58:36 2023
+# Finished Make data base on Tue Jun 06 16:51:23 2023
 
  
