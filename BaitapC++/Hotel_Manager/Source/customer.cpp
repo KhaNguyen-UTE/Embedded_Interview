@@ -139,7 +139,7 @@ int Customer::getID(){
 
 /*
 * Function: addBokking()
-* Description: add room into  room Database
+* Description: add room into room Database
 * Input:
 *   var: vector BookingHistory
 * Output:
