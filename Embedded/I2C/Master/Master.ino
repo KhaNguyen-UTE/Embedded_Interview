@@ -57,7 +57,7 @@ const byte ADDRESS = 0x55;    //Set the ADDRESS of Slave for Master
 
 //Declare functions for Master
 void startI2C();                                                //Start I2C
-void stopI2C();												    //Stop I2C
+void stopI2C();                                                 //Stop I2C
 uint8_t read_Ack();                                             //Read Ack status
 void send_Ack();                                                //Send Ack Status
 uint8_t receiveData(byte ADDRESS, byte * data, byte numbytes);  //Receive data from Slave
