@@ -42,8 +42,8 @@ void setup(){
   TX_OUT;
   TX_HIGH;
   delay(2000);
-  start_UART(4800);
-  Serial.begin(9600);
+  start_UART(1200);
+  Serial.begin(115200);
 }
 
 /*
@@ -86,6 +86,7 @@ void start_UART(unsigned int baudrate){
 *   print the data
 */
 void write_1Byte_UART(const uint8_t u_byte){
+    uint8_t count_parity = 0;
     uint8_t data;
     uint8_t send_byte;
     send_byte = u_byte;
@@ -94,15 +95,28 @@ void write_1Byte_UART(const uint8_t u_byte){
 
     for(int i = 0; i < 8; i++){
         data = send_byte & 0x01;
+        count_parity = count_parity ^ data;
         if (data == 1){
             TX_HIGH;
+            Serial.print(1);
         }
         else if(data == 0){
             TX_LOW;
+            Serial.print(0);
         }
         send_byte >>= 1;
         delayMicroseconds(UART_Cycle);
     }
+    Serial.println("");
+    if(count_parity == 1){
+      TX_HIGH;
+    }
+    else{
+      TX_LOW;
+    }
+
+    delayMicroseconds(UART_Cycle);
+
     Serial.print("Data send: ");
     Serial.println(String((char)u_byte));
 

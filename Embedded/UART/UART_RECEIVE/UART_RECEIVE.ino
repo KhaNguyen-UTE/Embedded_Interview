@@ -50,8 +50,8 @@ char data;
 *   none
 */
 void setup(){
-    Serial.begin(9600);
-    start_UART(2400);
+    Serial.begin(115200);
+    start_UART(1200);
 }
 
 /*
@@ -63,8 +63,13 @@ void setup(){
 *   print the data
 */
 void loop(){
-  data = read_1Byte_UART();
-  Serial.print(data);
+    data = read_1Byte_UART();
+    if ( data == 0){
+        Serial.println("Error receive");
+    }
+    else{
+        Serial.println(data);
+    }
 }
 
 /*
@@ -89,21 +94,29 @@ void start_UART(unsigned int baudrate){
 *   return the input data
 */
 uint8_t read_1Byte_UART(){
+    uint8_t count_parity = 0;
     uint8_t data;
     uint8_t  u_byte = 0;
     while (RX_READ() == HIGH){}
     delayMicroseconds(UART_Cycle + UART_Cycle / 2);
     for (int i = 0; i < 8; i++){
         data = RX_READ();
+        count_parity = count_parity ^ data;
         data = data << i;
         u_byte = u_byte | data;
         delayMicroseconds(UART_Cycle);
         
     }
+    Serial.print("Parity: ");
+    Serial.println(count_parity);
     data = RX_READ();
+    if(count_parity != data) return 0;
     delayMicroseconds(UART_Cycle);
+
+    data = RX_READ();
     if(data == 0) {
         return 0;
     }
     else return u_byte;
+    delayMicroseconds(UART_Cycle);
 }
