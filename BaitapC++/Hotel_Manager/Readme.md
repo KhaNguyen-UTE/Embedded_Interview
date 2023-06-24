@@ -8,7 +8,7 @@ The program creates an interface to manage employees and customers of a hotel
 - Room
   > contains room management functions
 - Customer
- > contains customer management functions
+  > contains customer management functions
 - Employee
   > contains employee management functions
 - Check
@@ -58,7 +58,7 @@ If already have Receptionist
  > Have the function check input data is valid or not such as input day, month, year have to > 0 and < itself limit,...
 
 **2. Check PASSSWORD**
-> If enter wrong Password over 3 times, your access wil be cancell
+> If enter wrong Password over 3 times, your access wil be cancel
 ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/824d3e3f-3218-4dfa-baef-4716a154ad0d)
 
 **3. Manager Functions**
