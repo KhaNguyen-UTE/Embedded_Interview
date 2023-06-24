@@ -66,18 +66,22 @@ If already have Receptionist
 When first run program, the manager is pre-installed with default password is :  >> "admin" <<
 
 **4. List data of Customer**
-![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/cec8d544-0f2b-4167-87a8-e485b858efe9)
+
+> ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/cec8d544-0f2b-4167-87a8-e485b858efe9)
 
 **5. List data of Employee**
 
-![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/d60f58d0-e2da-4796-b007-7d64d8ceebfd)
+> ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/d60f58d0-e2da-4796-b007-7d64d8ceebfd)
 
 **6. Clean/Booked/Available room**
 
 The hotel is set up with 10 available room. When 1 room is Booked, it STATUS is NO ( Not available ) and when Booked has payed or deleted, it STATUS is CL (CLEANING). When cleaned, the RECEPTIONIST will change it to OK ( Available ).
-![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/e0385179-a384-4176-bf37-9ff7bfffe6d4)
+
+> ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/e0385179-a384-4176-bf37-9ff7bfffe6d4)
+
 > The figure show the 105 room is cleaning, and when receptionist chose 105, it will set to Ok ( available)
 > 101, 102, 109 is NO ( Booked) , when chose it, it remain unchange.
+
 > ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/9b1c9d1b-4412-4b48-bf43-2411bb1fcbba)
 > ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/58d0dfe2-838f-4fd2-8d49-730d36e70704)
 
