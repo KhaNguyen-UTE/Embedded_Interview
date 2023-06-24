@@ -62,19 +62,15 @@ If already have Receptionist
 ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/824d3e3f-3218-4dfa-baef-4716a154ad0d)
 
 **3. Manager Functions**
-
 When first run program, the manager is pre-installed with default password is :  >> "admin" <<
 
 **4. List data of Customer**
-
 > ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/cec8d544-0f2b-4167-87a8-e485b858efe9)
 
 **5. List data of Employee**
-
 > ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/d60f58d0-e2da-4796-b007-7d64d8ceebfd)
 
 **6. Clean/Booked/Available room**
-
 The hotel is set up with 10 available room. When 1 room is Booked, it STATUS is NO ( Not available ) and when Booked has payed or deleted, it STATUS is CL (CLEANING). When cleaned, the RECEPTIONIST will change it to OK ( Available ).
 
 > ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/e0385179-a384-4176-bf37-9ff7bfffe6d4)
