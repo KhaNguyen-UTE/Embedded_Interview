@@ -36,7 +36,7 @@ If don't have info of Receptionist in Database, we need to add Receptionist
 If already have Receptionist
 > ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/b2cf414c-0896-4d69-8e65-7a9e12ec2337)
 
-### 🔸 As Cusstomer
+### 🔸 As Customer
 
 ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/c37bf5c1-8e46-4495-8dbe-87af70c2b0f2)
 
@@ -60,6 +60,14 @@ If already have Receptionist
 **2. Check PASSSWORD**
 > If enter wrong Password over 3 times, your access wil be cancell
 ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/824d3e3f-3218-4dfa-baef-4716a154ad0d)
+
+**3. Manager Functions**
+
+When first run program, the manager is pre-installed with default password is :  >> "admin" <<
+
+**4. Clean/Booked/Available room**
+
+The hotel is set up with 10 available room. When 1 room is Booked, it STATUS is NO ( Not available ) and when Booked has payed or deleted, it STATUS is CL (CLEANING). When cleaned, the RECEPTIONIST will change it to OK ( Available ).
 
 
 
