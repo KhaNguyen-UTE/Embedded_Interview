@@ -25,11 +25,11 @@ The program creates an interface to manage employees and customers of a hotel
 
 ### 🔸 As Hotel's Employee
 
-👉** _Fist step_**
+👉 ***Fist step***
 
 >  ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/4e326f55-2ca5-4410-9d92-e33b17d79ee7)
 
-👉 **_Second step_**
+👉 ***Second step***
 
 If don't have info of Receptionist in Database, we need to add Receptionist
 > ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/d1811306-8c9c-48c7-b801-600f870433c5)
@@ -41,15 +41,15 @@ If already have Receptionist
 
 ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/c37bf5c1-8e46-4495-8dbe-87af70c2b0f2)
 
-👉** _1. Book room_**
+👉***1. Book room***
 
 ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/2b96851c-e73e-451d-9fd0-2ccba65d3bd1)
 
-👉** _2,3. Check In / Out_**
+👉***2,3. Check In / Out***
 
 ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/8a6f7b97-c9bf-4b46-a375-9629e2a41e4e)
 
-👉** _Pay_**
+👉***Pay***
 
 ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/9b7f048e-8d13-46de-9363-2101995abcc6)
 
