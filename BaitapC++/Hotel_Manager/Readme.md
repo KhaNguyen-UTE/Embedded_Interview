@@ -29,6 +29,7 @@ The program creates an interface to manage employees and customers of a hotel
 >  ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/4e326f55-2ca5-4410-9d92-e33b17d79ee7)
 
 👉 _Second step_
+
 If don't have info of Receptionist in Database, we need to add Receptionist
 > ![image](https://github.com/KhaNguyen-UTE/Embedded_Interview/assets/84505849/d1811306-8c9c-48c7-b801-600f870433c5)
 
