@@ -5,8 +5,8 @@ TEST(XacDinhLoaiTamGiac, TestTamGiacKhongTonTai_1) {
 	double Edge_1 = 0;
 	double Edge_2 = 3;
 	double Edge_3 = 5;
-  EXPECT_EQ(XacDinhLoaiTamGiac(Edge_1,Edge_2,Edge_3), TamGiacKhongTonTai);
-  EXPECT_TRUE(true);
+	EXPECT_EQ(XacDinhLoaiTamGiac(Edge_1,Edge_2,Edge_3), TamGiacKhongTonTai);
+	EXPECT_TRUE(true);
 }
 
 TEST(XacDinhLoaiTamGiac, TestTamGiacKhongTonTai_2) {
